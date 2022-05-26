@@ -1,13 +1,14 @@
-
-
 import '../assets/styles/App.css';
 import Header from "../components/Header";
+import Main from "../components/Main";
+import Footer from "../components/Footer";
 
 function App() {
   return (
     <div className="App">
-      <h1>HELLO I'M HERE </h1>
       <Header/>
+      <Main/>
+      <Footer/>
     </div>
   );
 }
