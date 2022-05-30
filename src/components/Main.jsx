@@ -5,7 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Main = () => {
   return (
     <React.Fragment>
-        <h1>Main</h1>
+      <section>
+      </section> 
+      <div style={{"padding-bottom": "3000px", "background": "#fce8d1"}}></div>
     </React.Fragment>
   );
 }

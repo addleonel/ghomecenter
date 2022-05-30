@@ -1,14 +1,32 @@
-import '../assets/styles/App.css';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
+
 import Header from "../components/Header";
 import Main from "../components/Main";
 import Footer from "../components/Footer";
+import '../assets/styles/App.scss';
 
-function App() {
+const App = ()  =>{
   return (
     <div className="App">
-      <Header/>
-      <Main/>
-      <Footer/>
+      <Router>
+        <Header/>
+          <div className="wrap">
+              <div className="main">
+                  <Routes>
+                      <Route exact path="/" element={ <Main/> } />
+                      <Route path="/intro" element={<Main/>} />
+                      {/* <Route path="/linkcard/" component={ LinkcardPage }/> */}
+                  </Routes>
+              </div>
+          </div>
+          <div className="footer">
+              <Footer/>
+          </div>  
+      </Router>
     </div>
   );
 }
