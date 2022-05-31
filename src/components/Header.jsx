@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 
 import { Fade } from "react-awesome-reveal";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
