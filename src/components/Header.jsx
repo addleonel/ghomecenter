@@ -132,7 +132,8 @@ const Header = () => {
         <ul id="nav-bar__responsive-list-id" className="nav-bar__responsive-list" onClick={ enableMenu }>
             <li className="nav-bar__responsive-li" ><Link className="nav-bar__responsive-item" to="/intro#start">Introducción</Link></li>
             <li className="nav-bar__responsive-li" ><Link className="nav-bar__responsive-item" to="/intro#customers">Consumidores</Link></li>
-            <li className="nav-bar__responsive-li" ><Link className="nav-bar__responsive-item" to="/intro#how-does-it-work">¿Cómo Funciona?</Link></li>
+            <li className="nav-bar__responsive-li" ><Link className="nav-bar__responsive-item" to="/about">Sobre Nosotros</Link></li>
+            <li className="nav-bar__responsive-li" ><Link className="nav-bar__responsive-item" to="/contact">Contacto</Link></li>
             <li className="nav-bar__responsive-li" ><Link className="nav-bar__responsive-item" to="/intro#business">Negocios</Link></li>
         </ul>                                                       
       </section>
