@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 
 import { Fade } from "react-awesome-reveal";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Container, Dropdown } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logo from '../assets/static/logo/ghc_logo192.png';
 import bars from '../assets/static/icons/bars.svg';
@@ -93,12 +93,12 @@ const Header = () => {
       <nav id="navbarroot-id" className="navbarroot">
         <Container fluid="xxl" className="nav-bar"> 
             <Link className="nav-bar__logo" to="/">
-                <img className="nav-bar__logo-image" src={ logo }/> <span className="nav-bar__logo-text">Granitos Home Center</span>
+                <img className="nav-bar__logo-image" src={ logo } alt=""/> <span className="nav-bar__logo-text">Granitos Home Center</span>
             </Link>
             <button className="nav-bar__button-item nav-bar__buttons-item--subscribe nav-bar__buttons-item--subscribe-responsive" onClick={ () => window.location.href="/"}>Contactar</button>
             
             <div className="nav-bar__display" id="nav-bar__display-id" onClick={ displayResponsive }>
-                <img className="nav-bar__display-icon" src={ bars } /> 
+                <img className="nav-bar__display-icon" src={ bars } alt=""/> 
             </div>
             
             <div className="nav-bar__buttons">
