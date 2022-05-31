@@ -19,6 +19,8 @@ const App = ()  =>{
                   <Routes>
                       <Route exact path="/" element={ <Main/> } />
                       <Route path="/intro" element={<Main/>} />
+                      <Route path="/about" element={<Main/>} />
+                      <Route path="/contact" element={<Main/>} />
                       {/* <Route path="/linkcard/" component={ LinkcardPage }/> */}
                   </Routes>
               </div>
