@@ -6,11 +6,11 @@ def welcome_view(request):
 
 def contact_view(request):
     if request.method == 'POST':
-        print(request.POST)
-        print(request.POST['name'])
-        print(request.POST['surname'])
-        print(request.POST['email'])
-        print(request.POST['message'])
-        
-
+        name = request.POST.get('name')
+        surname = request.POST.get('surname')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+        contact = ContactModel(name=name, surname=surname, email=email, message=message)
+        contact.save()
+        return render(request, 'contact/contact.html', {'message': 'Gracias por contactarnos. En breve nos pondremos en contacto con usted.'})
     return render(request, 'contact/contact.html', {})
