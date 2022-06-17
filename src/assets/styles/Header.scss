@@ -1,8 +1,10 @@
 $bgcolor_button: #46586f;
 $border_color:  #46586f;
-$buttons_font_color: #0A2540;
+$buttons_font_color: #171933;
 $buttons_font_color_hover: rgba(0, 0, 0, 0.39);
 $buttons_background: #efefef;
+$color_2: #fce9d1;
+$color_4: #D1E3FC;
 
 .button_format {
     border: none !important;
@@ -126,7 +128,7 @@ $buttons_background: #efefef;
 
 #nav-bar-options-company-id {
     display: none;
-    background-color: #fce8d1;
+    background-color: $color_2;;
     transition: all .4s;
 }
 
