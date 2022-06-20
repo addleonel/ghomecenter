@@ -13,4 +13,4 @@ def contact_view(request):
         contact = ContactModel(name=name, surname=surname, email=email, message=message)
         contact.save()
         return render(request, 'contact/contact.html', {'message': 'Gracias por contactarnos. En breve nos pondremos en contacto con usted.'})
-    return render(request, 'contact/contact.html', {})
+    return render(request, 'contact/contact.html')

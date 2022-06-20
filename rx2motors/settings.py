@@ -1,5 +1,7 @@
 
 import os
+import sys
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -65,12 +67,24 @@ WSGI_APPLICATION = 'rx2motors.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'rx2motorsdb', #os.environ.get('DB_NAME'),
+            'USER': 'postgres',#os.environ.get('DB_USER'),
+            'PASSWORD': 'ad leonel', #os.environ.get('DB_PASSWORD'),
+            'HOST': os.environ.get('DB_HOST', '127.0.0.1'),
+            'PORT': os.environ.get('DB_PORT', '5432'),
+        }
+    } 
+elif len(sys.argv) > 0 and sys.argv[1] != 'collectstatic':
+    if os.getenv('DATABASE_URL', None) is None:
+        raise Exception('DATABASE_URL environment variable not defined')
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
+
 
 
 # Password validation
@@ -110,3 +124,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
