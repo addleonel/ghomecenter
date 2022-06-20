@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9968552e.css",
+    "main.js": "/static/js/main.badedfb2.js",
+    "static/js/787.4417d0da.chunk.js": "/static/js/787.4417d0da.chunk.js",
+    "static/media/ghc_logo192.png": "/static/media/ghc_logo192.55596af376f414d185a0.png",
+    "index.html": "/index.html",
+    "static/media/bars.svg": "/static/media/bars.09eaef1ac640e50152e491968c2c19a6.svg",
+    "main.9968552e.css.map": "/static/css/main.9968552e.css.map",
+    "main.badedfb2.js.map": "/static/js/main.badedfb2.js.map",
+    "787.4417d0da.chunk.js.map": "/static/js/787.4417d0da.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9968552e.css",
+    "static/js/main.badedfb2.js"
+  ]
+}

@@ -7,20 +7,48 @@
   box-sizing: border-box;
   font-family: 'Rubik', sans-serif;
 }
+
 body{
   min-height: 100vh;
   width: 100%;
   background: #ffffff;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
+.logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 40px 0;
+}
+
+.logo-image {
+  width: 300px;
+}
+
+.message-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-welcome {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: rgb(184, 255, 184);
+}
+
 .container{
-  width: 70%;
+  width: 50%;
   background: #fff;
   border-radius: 10px;
   padding: 20px 60px 30px 40px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .container .content{
   display: flex;
@@ -74,7 +102,7 @@ body{
 .content .right-side .topic-text{
   font-size: 23px;
   font-weight: 600;
-  color: #986919;
+  color: #ed8830;
 }
 .right-side .input-box{
   height: 50px;
@@ -88,7 +116,7 @@ body{
   border: none;
   outline: none;
   font-size: 16px;
-  background: #F0F1F8;
+  background: #eeeeee;
   border-radius: 6px;
   padding: 0 15px;
 
@@ -110,12 +138,12 @@ body{
   border: none;
   padding: 8px 16px;
   border-radius: 6px;
-  background: #986919;
+  background: #ed8830;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .button input[type="button"]:hover{
-  background: #986919;
+  background: #ed8830;
 }
 
 @media (max-width: 950px) {
