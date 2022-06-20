@@ -3,10 +3,10 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-
 import Header from "../components/Header";
 import Main from "../components/Main";
 import Footer from "../components/Footer";
+import Products from "../components/Products";
 import '../assets/styles/App.scss';
 
 const App = ()  =>{
@@ -18,7 +18,7 @@ const App = ()  =>{
               <div className="main">
                   <Routes>
                       <Route exact path="/" element={ <Main/> } />
-                      <Route path="/intro" element={<Main/>} />
+                      <Route path="/products" element={<Products/>} />
                       <Route path="/about" element={<Main/>} />
                       <Route path="/contact" element={<Main/>} />
                       {/* <Route path="/linkcard/" component={ LinkcardPage }/> */}

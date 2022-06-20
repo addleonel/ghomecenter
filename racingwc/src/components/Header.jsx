@@ -104,7 +104,7 @@ const Header = () => {
             
             <div className="nav-bar__buttons">
                 <button id="nav-bar__buttons-item--company-id" className="nav-bar__buttons-item nav-bar__buttons-item--company">Empresa <FontAwesomeIcon icon="fa-solid fa-caret-down" /></button>
-                <Link className="nav-bar__buttons-item nav-bar__buttons-item--business"  to="/intro">Productos</Link>
+                <Link className="nav-bar__buttons-item nav-bar__buttons-item--business"  to="/products">Productos</Link>
                 <button className="nav-bar__button-item nav-bar__buttons-item--subscribe" onClick={ () => window.location.href="/"}>Contactar</button>                                                                                                         
             </div>
         </Container>         
