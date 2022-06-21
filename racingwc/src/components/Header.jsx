@@ -4,14 +4,14 @@ import { Fade } from "react-awesome-reveal";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import logo from '../assets/static/logo/ghc_logo192.png';
+import logo from '../assets/static/logo/logo.png';
 import bars from '../assets/static/icons/bars.svg';
 
 import '../assets/styles/Header.scss';
-
+import buttonURL from "../utils";
 
 const Header = () => {
-
+  const contactURL = buttonURL;
   // Change background color on scroll
   const changeBackground = () => {
     if (window.scrollY >= 66){
@@ -93,8 +93,8 @@ const Header = () => {
       <nav id="navbarroot-id" className="navbarroot">
         <Container fluid="xxl" className="nav-bar"> 
             <Link className="nav-bar__logo" to="/">
-              {/* <img className="nav-bar__logo-image" src={ logo } alt=""/> */}
-                 <span className="nav-bar__logo-text">Logo</span>
+              <img className="nav-bar__logo-image" src={ logo } alt=""/>
+                 <span className="nav-bar__logo-text">Rosales Racing Motors</span>
             </Link>
             <button className="nav-bar__button-item nav-bar__buttons-item--subscribe nav-bar__buttons-item--subscribe-responsive" onClick={ () => window.location.href="/"}>Contactar</button>
             
@@ -104,8 +104,8 @@ const Header = () => {
             
             <div className="nav-bar__buttons">
                 <button id="nav-bar__buttons-item--company-id" className="nav-bar__buttons-item nav-bar__buttons-item--company">Empresa <FontAwesomeIcon icon="fa-solid fa-caret-down" /></button>
-                <Link className="nav-bar__buttons-item nav-bar__buttons-item--business"  to="/products">Productos</Link>
-                <button className="nav-bar__button-item nav-bar__buttons-item--subscribe" onClick={ () => window.location.href="/"}>Contactar</button>                                                                                                         
+                <Link className="nav-bar__buttons-item nav-bar__buttons-item--business"  to="/products/">Productos</Link>
+                <button className="nav-bar__button-item nav-bar__buttons-item--subscribe" onClick={() => window.location.href = contactURL}>Contactar</button>                                                                                                         
             </div>
         </Container>         
       </nav>
@@ -113,15 +113,15 @@ const Header = () => {
           <div id="nav-bar-options-company-id" className="nav-bar-options">
               <Container className="options-items">
                 <Fade cascade direction="right" duration={500}>
-                  <Link className="nav-bar__buttons-item items-container" to="/about" onClick={hideCompanyOptions}>
+                  <Link className="nav-bar__buttons-item items-container" to="/about/" onClick={hideCompanyOptions}>
                     <FontAwesomeIcon className="items-icon" icon="fa-solid fa-address-card"/>
                     <h3 className="items-title">Sobre nosotros</h3>
-                    <p className="items-text">Somos una empresa de granito de calidad, con más de 20 años de experiencia en el mercado.</p>
+                    <p className="items-text"></p>
                   </Link>
-                  <Link className="nav-bar__buttons-item items-container" to="/contact" onClick={hideCompanyOptions}>
+                  <Link className="nav-bar__buttons-item items-container" to="/contact/" onClick={() => window.location.href = contactURL}>
                     <FontAwesomeIcon className="items-icon" icon="fa-solid fa-address-book"/>
                     <h3 className="items-title">Contacto</h3>
-                    <p className="items-text">Somos una empresa de granito de calidad, con más de 20 años de experiencia en el mercado.</p>
+                    <p className="items-text"></p>
                   </Link>
                 </Fade> 
               </Container>
@@ -129,9 +129,9 @@ const Header = () => {
         </div>
       <section id="nav-bar__responsive" className="nav-bar__responsive--none"  onClick={ disableMenu }>
         <ul id="nav-bar__responsive-list-id" className="nav-bar__responsive-list" onClick={ enableMenu }>
-            <li className="nav-bar__responsive-li" ><Link className="nav-bar__responsive-item" to="/about">Sobre Nosotros</Link></li>
-            <li className="nav-bar__responsive-li" ><Link className="nav-bar__responsive-item" to="/contact">Contacto</Link></li>
-            <li className="nav-bar__responsive-li" ><Link className="nav-bar__responsive-item" to="/products">Productos</Link></li>
+            <li className="nav-bar__responsive-li" ><Link className="nav-bar__responsive-item" to="/about/">Sobre Nosotros</Link></li>
+            <li className="nav-bar__responsive-li" ><Link className="nav-bar__responsive-item" to="/contact/">Contacto</Link></li>
+            <li className="nav-bar__responsive-li" ><Link className="nav-bar__responsive-item" to="/products/">Productos</Link></li>
         </ul>                                                       
       </section>
     </React.Fragment>

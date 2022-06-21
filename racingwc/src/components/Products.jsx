@@ -6,7 +6,7 @@ const Products = () => {
   return (
     <React.Fragment>
         <Container fluid="xxl">
-            <h2 className="category">Categoria 1</h2>
+            <h2 id="llantas" className="category">Llantas </h2>
             <div className="products">
                 <div className="c-item in-products">
                     <a href="/" className="c-image">
@@ -81,7 +81,7 @@ const Products = () => {
                     </p>
                 </div>
             </div>
-            <h2 className="category">Categoria 2</h2>
+            <h2 id="sistema-arrastre" className="category">Sistema de arrastre</h2>
             <div className="products">   
                 <div className="c-item">
                     <a href="/" className="c-image">
@@ -173,6 +173,12 @@ const Products = () => {
                     </p>
                 </div>
             </div>
+            <h2 id="sistema-electrico" className="category">Sistema electrico</h2>
+            <h2 id="sistema-motor" className="category">Sistema de motor</h2>
+            <h2 id="luces" className="category">Luces</h2>
+            <h2 id="accesorios-motor" className="category">Accesorios para motor</h2>
+            <h2 id="accesorios-piloto" className="category">Accesorios para piloto</h2>
+            <h2 id="sistemas-frenos" className="category">Sistema de frenos</h2>
         </Container>
     </React.Fragment>
   );

@@ -6,9 +6,89 @@
 
 .section-1 {
     background-color: #ffd176;
-    height: 100vh;
+    height: auto;
 }
 
+.section-1-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.portal-phrase {
+    padding-bottom: 60px;
+}
+
+.portal-title {
+    padding-top: 90px;
+    font-weight: bold;
+    font-size: 60px;
+}
+
+.portal-subtitle {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+.principal__message-button {
+    color: #fff;
+    border: none;
+    background: #4d3ff2;
+    border-radius: 19px;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px 30px;
+    transition: all .4s;
+}
+
+.principal__message-button:hover {
+    background: #5b5596;
+    transform: scale(1.1);
+}
+
+.principal__message-button:focus {
+    outline: none;
+}
+
+.portal-media {
+    width: 100%;
+    position: relative;
+}
+
+.portal-video {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.portal-image {
+    position: absolute;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.pimage-1 {
+    width: 200px;
+    height: 200px;
+    top: 0%;
+    right: 20%;
+    z-index: 1;
+}
+
+.pimage-2 {
+    width: 400px;
+    height: 400px;
+    top: 10%;
+    right: 40%;
+    z-index: 2;
+}
 
 .section-2 {
     background-color: #eaeded;
@@ -96,4 +176,51 @@
     .c-item {
         width: 100%;
     }
+
+    .slick-arrow {
+        display: none;
+    }
  }
+
+ @media screen and (max-width: 1286px) {
+    .section-1-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pimage-1 {
+        width: 150px;
+        height: 150px;
+        top: 0%;
+        right: 20%;
+        z-index: 1;
+    }
+    
+    .pimage-2 {
+        width: 350px;
+        height: 350px;
+        top: 10%;
+        right: 40%;
+        z-index: 2;
+    }
+
+    .portal-video {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 1136px) {
+    .portal-media {
+        display: none;
+    }
+
+    .section-1-content {
+        grid-template-columns: 1fr;
+    }
+}
