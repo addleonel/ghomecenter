@@ -3,14 +3,16 @@ import "../assets/styles/Footer.scss";
 import moto from "../assets/static/logo/moto.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from "react-router-dom";
+import buttonURL from "../utils";
 
 const Footer = () => {
+  const contactURL = buttonURL;
   return (
     <React.Fragment>
       <div className="home-footer">
         <ul className="home-footer__ul">
             <li className="home-footer__li"><Link  to="/about/" className="home-footer__link">Sobre Nosotros</Link></li>
-            <li className="home-footer__li"><Link  to="/contact/" className="home-footer__link">Contacto</Link></li>
+            <li className="home-footer__li"><Link  to="/contact/" className="home-footer__link" onClick={() => window.location.href = contactURL}>Contacto</Link></li>
             <li className="home-footer__li"><Link  to="/products/" className="home-footer__link">Productos</Link></li>
         </ul>
         <div>

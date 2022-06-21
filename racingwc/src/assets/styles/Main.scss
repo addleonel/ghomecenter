@@ -108,6 +108,7 @@
     width: 220px;
     height: auto;
     padding: 10px 20px;
+    margin: 0 10px 30px 10px;
     border-radius: 10px;
     background-color: #fff;
     border: 1px solid #dcdcdced;
@@ -152,6 +153,17 @@
     color: #000;
  }
 
+ .c-book {
+    background-color: #ef3a3a !important;
+    border-color: #ef3a3a !important;
+    outline: none !important;
+    box-shadow: none !important;
+ }
+
+ .c-book:focus {
+    
+    outline: none !important;
+ }
 
 // Arrow style
 .slick-prev, .slick-next {
@@ -171,6 +183,7 @@
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-row-gap: 40px;
 }
+
 
  @media screen and (max-width: 450px) {
     .c-item {

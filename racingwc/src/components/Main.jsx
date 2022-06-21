@@ -1,6 +1,6 @@
 import React , { useState, useEffect } from "react";
 import Slider from "react-slick";
-import { Container } from "react-bootstrap";
+import { Container, Button, Modal} from "react-bootstrap";
 import "../assets/styles/Main.scss";
 import video from "../assets/static/video/video1.mp4";
 import { Link } from "react-router-dom";
@@ -8,43 +8,57 @@ import { HashLink } from "react-router-hash-link";
 import buttonURL from "../utils.js";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+// product images
+
 const Main = () => {
 	const contactURL = buttonURL;
-	const [show, setShow] = useState(5);
+	const [show, setShow] = useState(false);
+	const handleClose = () => setShow(false);
+	const handleShow = () => setShow(true);
+	const [showp, setShowp] = useState(5);
 	const sliderState = {
 		dots: false,
 		infinite: true,
 		speed: 500,
-		slidesToShow: show,
+		slidesToShow: showp,
 		slidesToScroll: 1
 	}
+
+	useEffect(()=>{	
+		window.addEventListener('load', () => {
+			if (window.innerWidth <= 450) {
+				setShowp(1);
+			}
+		});
+	}, []);
+
 	useEffect(()=>{	
 		window.addEventListener('resize', () => {
 			if (window.innerWidth <= 1160) {
-				setShow(4);
+				setShowp(4);
 			}
 		});
 		window.addEventListener('resize', () => {
 			if (window.innerWidth <= 923) {
-				setShow(3);
+				setShowp(3);
 			}
 		});
 
 		window.addEventListener('resize', () => {
 			if (window.innerWidth <= 710) {
-				setShow(2);
+				setShowp(2);
 			}
 		});
 
 		window.addEventListener('resize', () => {
 			if (window.innerWidth <= 450) {
-				setShow(1);
+				setShowp(1);
 			}
 		});
 
 		window.addEventListener('resize', () => {
 			if (window.innerWidth > 1160) {
-				setShow(5);
+				setShowp(5);
 			}
 		});
 	}, []);
@@ -84,16 +98,18 @@ const Main = () => {
 						<Slider {...sliderState}>
 							<div>
 								<div className="c-item">
-									<a href="/" className="c-image">
+									<p href="/" className="c-image">
 										<img src="https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg" width="300px" alt="" />
-									</a>
-									<a href="/" className="c-title">
+									</p>
+									<p className="c-title">
 										Apple Macbook Air 11-incj MD233LL/A 4GB RAM. 128GB SSD - Silver
-									</a>
-									
+									</p>
 									<p className="c-price">
 										s/1,999.00
 									</p>
+									<Button variant="primary" className="c-book" onClick={handleShow}>
+										Reservar
+									</Button>
 								</div>
 							</div>
 							<div>
@@ -413,6 +429,26 @@ const Main = () => {
 					</div>
 				</Container>
 			</section>
+
+			<Modal show={show} onHide={handleClose}>
+				<Modal.Header closeButton>
+				<Modal.Title>Reservar Producto</Modal.Title>
+				</Modal.Header>
+				<Modal.Body>
+					<p>
+					Para reservar este producto, usted debe contactarse con nosotros
+					especificando el producto en el mensaje
+					</p>
+				</Modal.Body>
+				<Modal.Footer>
+				<Button variant="secondary" onClick={handleClose}>
+					cerrar
+				</Button>
+				<Button variant="primary" onClick={() => window.location.href = contactURL}>
+					Contactar
+				</Button>
+				</Modal.Footer>
+			</Modal>
 		</React.Fragment>
   );
 }

@@ -5,6 +5,19 @@ import "../assets/styles/Main.scss";
 const Products = () => {
   return (
     <React.Fragment>
+        <section style={{backgroundColor: "#99cdff"}} className="section-m section-1">
+            <Container fluid="xxl">
+                    <div className="portal-phrase">
+                        <h1 className="portal-title">
+                        Descubre nuestros productos
+                        </h1>
+                        <p className="portal-subtitle">
+                            Explora nuestro catalogo
+                            
+                        </p>
+                    </div>
+            </Container>
+        </section>
         <Container fluid="xxl">
             <h2 id="llantas" className="category">Llantas </h2>
             <div className="products">
