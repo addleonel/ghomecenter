@@ -1,3 +1,3 @@
-const buttonURL = "http://127.0.0.1:8000/contact/";
+const buttonURL = "https://lobster-app-emcoq.ondigitalocean.app/contact/";
 
 export default buttonURL;

@@ -1,6 +1,5 @@
 import * as React from "react";
 import "../assets/styles/Footer.scss";
-import moto from "../assets/static/logo/moto.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from "react-router-dom";
 import buttonURL from "../utils";
@@ -35,7 +34,7 @@ const Footer = () => {
           <p className="home-footer__p"><FontAwesomeIcon icon="fa-solid fa-location-dot" /> jr .tarapaca 918 Huánuco, Peru</p>
         </div>
     </div>
-    <img className="redwoman" src={moto} />
+    <img className="redwoman" src="https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/logo/moto.png" />
     <p className="home-footer__copyright">
       2022 © Rosales Racing Motors - Reservados todos los derechos
     </p>

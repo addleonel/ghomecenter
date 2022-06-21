@@ -2,7 +2,6 @@ import React , { useState, useEffect } from "react";
 import Slider from "react-slick";
 import { Container, Button, Modal} from "react-bootstrap";
 import "../assets/styles/Main.scss";
-import video from "../assets/static/video/video1.mp4";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import buttonURL from "../utils.js";
@@ -63,6 +62,7 @@ const Main = () => {
 		});
 	}, []);
 
+
 	return (
 		<React.Fragment>
 			<section className="section-m section-1">
@@ -86,7 +86,8 @@ const Main = () => {
 						<div className="portal-media">
 							<img className="portal-image pimage-1" src="https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/271830144_3039380062980739_2031031125507542809_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=tE9hmojjzjkAX-xvlEl&tn=3RXRreKQDGxF6YYQ&_nc_ht=scontent-lim1-1.xx&oh=00_AT96MpbLcXMMsjJ-8LLTq7Kj5D_yIfZh-0etspTbI6i74A&oe=62B657E2" alt="" />
 							<img className="portal-image pimage-2"src="https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/272263958_3042277879357624_3408080719838212641_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=x5P6I9m8fQwAX_TAq0e&tn=3RXRreKQDGxF6YYQ&_nc_ht=scontent-lim1-1.xx&oh=00_AT9KjUXMfQWKGAqLUM0HPxH7rzcMuGU3Sw7_og5xLdLx1A&oe=62B64B83" alt="" />
-							<video className="portal-video" src={video} type="video/mp4" autoPlay muted loop></video>
+							
+							<video id="mp4_src" className="portal-video" src="https://accezby-media-develop.nyc3.digitaloceanspaces.com/video/video1.mp4" autoPlay muted loop></video>
 						</div>
 					</div>
 				</Container>
