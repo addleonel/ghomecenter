@@ -8,15 +8,15 @@ const ProductItem= (props) => {
 	const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
-    const class_= "c-item" + props.in_;
+    const class_= "c-item" + ` ${props.in_}`;
     return (
         <React.Fragment>
             <div className={class_}>
-                <p className="c-image">
+                <div className="c-image">
                     <img src={props.image} width="300px" alt="" />
-                </p>
+                </div>
                 <p className="c-title">
-                   {props.name}
+                   {props.name} - {props.mark}
                 </p>
                 <p className="c-price">
                     S/ {props.price}
@@ -25,15 +25,18 @@ const ProductItem= (props) => {
                     Reservar
                 </Button>
             
-                <Modal show={show} onHide={handleClose}>
+                <Modal show={show} onHide={handleClose} centered>
                     <Modal.Header closeButton>
                     <Modal.Title>Reservar Producto</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         <p>
                         Para reservar este producto, usted debe contactarse con nosotros
-                        especificando el producto en el mensaje
+                        especificando el producto y su marca en el mensaje
                         </p>
+                        <div className="c-image">
+                            <img src={props.image} width="300px" alt="" />
+                        </div>
                     </Modal.Body>
                     <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>

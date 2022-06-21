@@ -34,23 +34,6 @@ const llantas = [
         price: "price 1",
         image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
     },
-    {   id: 8,
-        name: "product 8",
-        price: "price 1",
-        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
-    },
-    {   id: 9,
-        name: "product 9",
-        price: "price 1",
-        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
-    },
-    {   id: 10,
-        name: "product 10",
-        price: "price 1",
-        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
-    },
-  
-    
 ]
 
 const sistemaArrastre = [
@@ -93,138 +76,469 @@ const sistemaArrastre = [
     
 ]
 
-const accesoriosPiloto = [
-    // {
-    //     id: 1,	
-    //     name: "TRAJE 180 TRICE (GREY ORANGE)",
-    //     mark: "FOX",
-    //     price: "667",
-    // },
-    // {
-    //     2.	
-    //     name: TRAJE 180 TRICE (TEAL)
-    //     mark: FOX
-    //     price: 667
-
-    // }
-        
-    //     3.	name: "TRAJE 180 LUX (BLACK WHITE)"
-    //     mark: FOX
-    //     price: 538
-        
-    //     4.	name: TRAJE 180 LUX (BLACK BLACK)
-    //     mark: FOX
-    //     price: S/ 538
-        
-    //     5.	name: TRAJE 180 SKEW (BLACK)
-    //     mark: FOX
-    //     price: S/ 658
-        
-    //     6.	name: TRAJE 180 PRIX (BLUE)
-    //     mark: FOX
-    //     price: S/ 568
-        
-    //     7.	name: TRAJE 180 MASTAR (YELLOW)
-    //     mark: FOX
-    //     price: S/ 448
-    //     8.	name: TRAJE 180 VICIOS (BLUE PINK)
-    //     mark: FOX
-    //     price: S/ 448
-    //     9.	name: TRAJE FACTORY EDITION (NEGRO ROSA)
-    //     mark: PRO TORK
-    //     price: S/ 278
-    //     10.	name: TRAJE JET FACTORY EDITION (NEGRO ROSA)
-    //     mark: PRO TORK
-    //     price: S/ 298
-    //     11.	name: BOTAS COMP BOOT (BLACK YELLOW)
-    //     mark: FOX
-    //     price: S/ 1057
-    //     12.	name: BOTAS INSTINCT ARTICULABLES (BLACK)
-    //     mark: FOX
-    //     price: S/ 2149
-    //     13.	name: BOTAS COMP BOOT (BLACK)
-    //     mark: FOX
-    //     price: S/ 989
-    //     14.	name: BOTAS COMP X BOOT (BLACK)
-    //     mark: FOX
-    //     price: S/ 1079
-    //     15.	name: BOTAS INSTINCT ARTICULABLES (GREY RED)
-    //     mark: FOX
-    //     price: S/ 1889
-    //     16.	name: BOTAS INSTINCT ARTICULABLES (BLACK)
-    //     mark: FOX
-    //     price: S/ 1889
-    //     17.	name: BOTAS BOOT 3.5 (BLACK RED)
-    //     mark: LEATIA
-    //     price: S/ 897
-    //     18.	name: BOTAS X ROCK (BLACK SILVER)
-    //     mark: ACERBID
-    //     price: S/ 1379
-    //     19.	name: BOTAS X ROCK (BLACK)
-    //     mark: ACERBID
-    //     price: S/ 1379
-    //     20.	name: CASCO FAST EVO (BLACK MX 437)
-    //     mark: LS2
-    //     price: S/ 439
-    //     21.	name: CASCO SUBVERTER (RASCAL MX 700)
-    //     mark: LS2
-    //     price: S/ 649
-    //     22.	name: CASCO FAST EVO (TOWFER MX 437)
-    //     mark: LS2
-    //     price: S/ 439
-    //     23.	name: CASCO SUBVERTER (TROOP MX 700)
-    //     mark: LS2
-    //     price: S/ 649
-    //     24.	name: CASCO SUBVERTER (SINGLEMONO MX 700)
-    //     mark: LS2
-    //     price: S/ 649
-    //     25.	name: CASCO VOLT MX 437
-    //     mark: LS2
-    //     price: S/ 458
-    //     26.	name: CASCO TWIST FREEDOM (YELLOW GLOSS)
-    //     mark: AIROH
-    //     price: S/ 598
-    //     27.	name: CASCO TWIST MIX (ORANGE GLOSS)
-    //     mark: AIROH
-    //     price: S/ 598
-    //     28.	name: CASCO SX-1 SONIC (BLACK YELLOW)
-    //     mark: BELL
-    //     price: S/ 359
-    //     29.	name: CASCO PG 3095 (YELLOW FLUO)
-    //     mark: PROGRIP
-    //     price: S/ 439
-    //     30.	name: CASCO FACTORY EDITION (BLUE SKY)
-    //     mark: PRO TORK
-    //     price: S/ 247
-    //     31.	name: CASCO FACTORY EDITION (YELLOW BLUE)
-    //     mark: PRO TORK
-    //     price: S/ 247
-    //     32.	name: CASCO FACTORY EDITION (YELLOW NEON)
-    //     mark: PRO TORK
-    //     price: S/ 247
-    //     33.	name: CASCO + GOGGLES (YELLOW BLUE)
-    //     mark: SOMAN
-    //     price: S/ 348
-    //     34.	name: CASCO + GOGGLES (RED BLACK)
-    //     mark: SOMAN
-    //     price: S/ 348
-    //     35.	name: BOLSA CAMEL BAG 2.5L 
-    //     mark: ACERBID
-    //     price: S/ 253
-    //     36.	name: BOLSA CAMEL BAG 2.0L 
-    //     mark: ACERBID
-    //     price: S/ 268
-    //     37.	name: PECHERA (BLANCO) 
-    //     mark: ACERBID
-    //     price: S/ 329
-    //     38.	name: PECHERA (NEGRO) 
-    //     mark: ACERBID
-    //     price: S/ 329
-
-    //     39.	name: PECHERA (AZUL) 
-    //     mark: ACERBID
-    //     price: S/ 329
-
+const sistemaElectrico = [
+    {   id: 1,
+        name: "product 1",
+        price: "price 1",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 2,
+        name: "product 2",
+        price: "price 2",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 3,
+        name: "product 3",
+        price: "price 3",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 4,
+        name: "product 4",
+        price: "price 4",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 5,
+        name: "product 5",
+        price: "price 5",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 6,
+        name: "product 6",
+        price: "price 1",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 7,
+        name: "product 7",
+        price: "price 1",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
 ]
 
-export {llantas, sistemaArrastre, accesoriosPiloto};
+const sistemaMotor = [
+    {   id: 1,
+        name: "product 1",
+        price: "price 1",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 2,
+        name: "product 2",
+        price: "price 2",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 3,
+        name: "product 3",
+        price: "price 3",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 4,
+        name: "product 4",
+        price: "price 4",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 5,
+        name: "product 5",
+        price: "price 5",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 6,
+        name: "product 6",
+        price: "price 1",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 7,
+        name: "product 7",
+        price: "price 1",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+]
+
+const luces = [
+    {   id: 1,
+        name: "product 1",
+        price: "price 1",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 2,
+        name: "product 2",
+        price: "price 2",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 3,
+        name: "product 3",
+        price: "price 3",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 4,
+        name: "product 4",
+        price: "price 4",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 5,
+        name: "product 5",
+        price: "price 5",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 6,
+        name: "product 6",
+        price: "price 1",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 7,
+        name: "product 7",
+        price: "price 1",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+]
+
+const accesoriosMotor = [
+    {   id: 1,
+        name: "product 1",
+        price: "price 1",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 2,
+        name: "product 2",
+        price: "price 2",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 3,
+        name: "product 3",
+        price: "price 3",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 4,
+        name: "product 4",
+        price: "price 4",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 5,
+        name: "product 5",
+        price: "price 5",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 6,
+        name: "product 6",
+        price: "price 1",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 7,
+        name: "product 7",
+        price: "price 1",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+]
+
+const accesoriosPiloto = [
+    {
+        id: "1",	
+        name: "TRAJE 180 TRICE (GREY ORANGE)",
+        mark: "FOX",
+        price: "667",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C1.jpg",
+    },
+    {
+        id: "2",	
+        name: "TRAJE 180 TRICE (TEAL)",
+        mark: "FOX",
+        price: "667",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C2.jpg"
+
+    },
+    {
+        id: "3",	
+        name: "TRAJE 180 LUX (BLACK WHITE)",
+        mark: "FOX",
+        price: "538",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C3.jpg"
+
+    }
+    ,
+    {
+        id: "4",	
+        name: "TRAJE 180 LUX (BLACK BLACK)",
+        mark: "FOX",
+        price: "538",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C4.jpg"
+
+    },
+    {
+        id: "5",	
+        name: "TRAJE 180 SKEW (BLACK)",
+        mark: "FOX",
+        price: "658",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C5.jpg"
+
+    },
+    {   id:"6",   
+        name: "TRAJE 180 PRIX (BLUE)",
+        mark: "FOX",
+        price: "568",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C6.jpg"
+    },
+
+    {   id:"7",   
+        name: "TRAJE 180 MASTAR (YELLOW)",
+        mark: "FOX",
+        price: "448",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C7.jpg"
+    },
+        
+    {   id:"8",   
+        name: "TRAJE 180 VICIOS (BLUE PINK)",
+        mark: "FOX",
+        price: "448",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C8.jpg"
+    },
+
+    {   id:"9",   
+        name: "TRAJE FACTORY EDITION (NEGRO ROSA)",
+        mark: "PRO TORK",
+        price: "278",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C9.jpg"
+    },
+
+    {   id:"10",   
+        name: "TRAJE FACTORY EDITION (NEGRO ROSA)",
+        mark: "PRO TORK",
+        price: "298",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C10.jpg"
+    },
+    
+    {   id: "11",   
+        name: "BOTAS COMP BOOT (BLACK YELLOW)",
+        mark: "FOX",
+        price: "1057",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C11.jpg"
+    },
+    {   id: "12",   
+        name: "BOTAS INSTINCT ARTICULABLES (BLACK)",
+        mark: "FOX",
+        price: "2149",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C12.jpg"
+    },
+    {   id: "13",   
+        name: "BOTAS COMP BOOT (BLACK)",
+        mark: "FOX",
+        price: "989",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C12.jpg"
+    },
+    {   id: "14",   
+        name: "BOTAS COMP X BOOT (BLACK)",
+        mark: "FOX",
+        price: "1079",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C13.jpg"
+    },
+
+    {   id: "15",   
+        name: "BOTAS INSTINCT ARTICULABLES (GREY RED)",
+        mark: "FOX",
+        price: "1889",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C15.jpg"
+    },
+    
+    {   id: "16",   
+        name: "BOTAS INSTINCT ARTICULABLES (BLACK)",
+        mark: "FOX",
+        price: "1889",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C16.jpg"
+    },
+
+     
+    {   id: "17",   
+        name: "BOTAS BOOT 3.5 (BLACK RED)",
+        mark: "LEATIA",
+        price: "897",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C17.jpg"
+    },
+        
+    {   id: "18",   
+        name: "BOTAS X ROCK (BLACK SILVER)",
+        mark: "ACERBID",
+        price: "1379",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C18.jpg"
+    },
+    {   id: "19",   
+        name: "BOTAS X ROCK (BLACK)",
+        mark: "ACERBID",
+        price: "1379",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C19.jpg"
+    },
+
+    {   id: "20",   
+        name: "CASCO FAST EVO (BLACK MX 437)",
+        mark: "LS2",
+        price: "439",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C20.jpg"
+    },
+    {   id: "21",   
+        name: "CASCO SUBVERTER (RASCAL MX 700)",
+        mark: "LS2",
+        price: "649",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C21.jpg"
+    },
+
+    {   id: "22",   
+        name: "CASCO FAST EVO (TOWFER MX 437)",
+        mark: "LS2",
+        price: "439",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C22.jpg"
+    },
+
+    {   id: "23",   
+        name: "CASCO SUBVERTER (TROOP MX 700)",
+        mark: "LS2",
+        price: "649",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C23.jpg"
+    },
+
+    {   id: "24",   
+        name: "CASCO SUBVERTER (SINGLEMONO MX 700)",
+        mark: "LS2",
+        price: "649",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C24.jpg"
+    },
+
+    {   id: "25",   
+        name: "CASCO VOLT MX 437",
+        mark: "LS2",
+        price: "458",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C25.jpg"
+    },
+      
+    {   id: "26",   
+        name: "CASCO TWIST FREEDOM (YELLOW GLOSS)",
+        mark: "AIROH",
+        price: "598",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C26.jpg"
+    }, 
+
+    {   id: "27",   
+        name: "CASCO TWIST MIX (ORANGE GLOSS)",
+        mark: "AIROH",
+        price: "598",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C27.jpg"
+    }, 
+    {   id: "28",   
+        name: "CASCO SX-1 SONIC (BLACK YELLOW)",
+        mark: "BELL",
+        price: "359",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C28.jpg"
+    }, 
+    {   id: "29",   
+        name: "CASCO PG 3095 (YELLOW FLUO)",
+        mark: "PROGRIP",
+        price: "439",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C29.jpg"
+    }, 
+      
+    {   id: "30",   
+        name: "CASCO FACTORY EDITION (BLUE SKY)",
+        mark: "PRO TORK",
+        price: "247",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C30.jpg"
+    },
+    {   id: "31",   
+        name: "CASCO FACTORY EDITION (YELLOW BLUE)",
+        mark: "PRO TORK",
+        price: "247",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C31.jpg"
+    },
+    {   id: "32",   
+        name: "CASCO FACTORY EDITION (YELLOW NEON)",
+        mark: "PRO TORK",
+        price: "247",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C32.jpg"
+    },  
+    {   id: "33",   
+        name: "CASCO + GOGGLES (YELLOW BLUE)",
+        mark: "SOMAN",
+        price: "348",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C33.jpg"
+    },
+    {   id: "34",   
+        name: "CASCO + GOGGLES (RED BLACK)",
+        mark: "SOMAN",
+        price: "348",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C34.jpg"
+    },
+    {   id: "35",   
+        name: "BOLSA CAMEL BAG 2.5L ",
+        mark: "ACERBID",
+        price: "253",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C35.jpg"
+    },    
+    {   id: "36",   
+        name: "BOLSA CAMEL BAG 2.0L ",
+        mark: "ACERBID",
+        price: "268",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C36.jpg"
+    },
+    {   id: "37",   
+        name: "PECHERA (BLANCO)",
+        mark: "ACERBID",
+        price: "329",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C37.jpg"
+    },
+    {   id: "38",   
+        name: "PECHERA (NEGRO)",
+        mark: "ACERBID",
+        price: "329",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C38.jpg"
+    },
+
+    {   id: "39",   
+        name: "PECHERA (AZUL)",
+        mark: "ACERBID",
+        price: "329",
+        image: "https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/products/accesoriosPilotos/C38.jpg"
+    },
+]
+
+const sistemaFrenos = [
+    {   id: 1,
+        name: "product 1",
+        price: "price 1",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 2,
+        name: "product 2",
+        price: "price 2",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 3,
+        name: "product 3",
+        price: "price 3",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 4,
+        name: "product 4",
+        price: "price 4",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 5,
+        name: "product 5",
+        price: "price 5",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 6,
+        name: "product 6",
+        price: "price 1",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+    {   id: 7,
+        name: "product 7",
+        price: "price 1",
+        image: "https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg",
+    },
+]
+
+export {
+    llantas, 
+    sistemaArrastre,
+    sistemaElectrico,
+    sistemaMotor,
+    luces,
+    accesoriosMotor, 
+    accesoriosPiloto,
+    sistemaFrenos
+};

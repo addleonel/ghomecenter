@@ -9,7 +9,15 @@ import buttonURL from "../utils.js";
 
 // products
 import ProductItem from "./ProductItem";
-import { llantas, sistemaArrastre, accesoriosPiloto } from "../productsList.js";
+import { llantas, 
+    sistemaArrastre,
+    sistemaElectrico,
+    sistemaMotor,
+    luces,
+    accesoriosMotor, 
+    accesoriosPiloto,
+    sistemaFrenos
+ } from "../productsList.js";
 
 const Main = () => {
 	const contactURL = buttonURL;
@@ -78,6 +86,7 @@ const Main = () => {
 						name={link.name}
 						image={link.image}
 						price={link.price}
+						mark={link.mark}
 						in_=""
 					/>
 				</div>
@@ -94,6 +103,7 @@ const Main = () => {
 						name={link.name}
 						image={link.image}
 						price={link.price}
+						mark={link.mark}
 						in_=""
 					/>
 				</div>
@@ -101,7 +111,7 @@ const Main = () => {
         )
     });
 
-    const listSistemaElectrico =  llantas.slice(0, 7).map((link) =>{
+    const listSistemaElectrico =  sistemaElectrico.slice(0, 7).map((link) =>{
         return( 
             <React.Fragment>
                 <div>
@@ -110,6 +120,7 @@ const Main = () => {
 						name={link.name}
 						image={link.image}
 						price={link.price}
+						mark={link.mark}
 						in_=""
 					/>
 				</div>
@@ -117,7 +128,7 @@ const Main = () => {
         )
     });
 
-    const listSistemaMotor =  llantas.slice(0, 7).map((link) =>{
+    const listSistemaMotor =  sistemaMotor.slice(0, 7).map((link) =>{
         return( 
             <React.Fragment>
                 <div>
@@ -126,6 +137,7 @@ const Main = () => {
 						name={link.name}
 						image={link.image}
 						price={link.price}
+						mark={link.mark}
 						in_=""
 					/>
 				</div>
@@ -134,7 +146,7 @@ const Main = () => {
     });
 
 
-    const listLuces =  llantas.slice(0, 7).map((link) =>{
+    const listLuces =  luces.slice(0, 7).map((link) =>{
         return( 
             <React.Fragment>
                 <div>
@@ -143,6 +155,7 @@ const Main = () => {
 						name={link.name}
 						image={link.image}
 						price={link.price}
+						mark={link.mark}
 						in_=""
 					/>
 				</div>
@@ -150,7 +163,7 @@ const Main = () => {
         )
     });
 
-    const listAccesorioMotor =  llantas.slice(0, 7).map((link) =>{
+    const listAccesorioMotor =  accesoriosMotor.slice(0, 7).map((link) =>{
         return( 
             <React.Fragment>
                 <div>
@@ -159,6 +172,7 @@ const Main = () => {
 						name={link.name}
 						image={link.image}
 						price={link.price}
+						mark={link.mark}
 						in_=""
 					/>
 				</div>
@@ -166,7 +180,7 @@ const Main = () => {
         )
     });
 
-    const listAccesorioPiloto =  llantas.slice(0, 7).map((link) =>{
+    const listAccesorioPiloto =  accesoriosPiloto.slice(0, 7).map((link) =>{
         return( 
             <React.Fragment>
                 <div>
@@ -175,6 +189,7 @@ const Main = () => {
 						name={link.name}
 						image={link.image}
 						price={link.price}
+						mark={link.mark}
 						in_=""
 					/>
 				</div>
@@ -182,7 +197,7 @@ const Main = () => {
         )
     });
 
-    const listSistemaFrenos =  llantas.slice(0, 7).map((link) =>{
+    const listSistemaFrenos =  sistemaFrenos.slice(0, 7).map((link) =>{
         return( 
             <React.Fragment>
                 <div>
@@ -191,6 +206,7 @@ const Main = () => {
 						name={link.name}
 						image={link.image}
 						price={link.price}
+						mark={link.mark}
 						in_=""
 					/>
 				</div>

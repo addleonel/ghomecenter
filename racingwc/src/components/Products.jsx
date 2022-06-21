@@ -3,7 +3,15 @@ import { Container } from "react-bootstrap";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "../assets/styles/Main.scss";
 import ProductItem from "./ProductItem";
-import { llantas, sistemaArrastre } from "../productsList.js";
+import {llantas, 
+    sistemaArrastre,
+    sistemaElectrico,
+    sistemaMotor,
+    luces,
+    accesoriosMotor, 
+    accesoriosPiloto,
+    sistemaFrenos
+} from "../productsList.js";
 const Products = () => {
     const listLlantas =  llantas.map((link) =>{
         return( 
@@ -13,13 +21,14 @@ const Products = () => {
                     name={link.name}
                     image={link.image}
                     price={link.price}
+                    mark={link.mark}
                     in_="in-products"
                 />
             </React.Fragment>
         )
     });
 
-    const listSistemaArrastre =  llantas.map((link) =>{
+    const listSistemaArrastre =  sistemaArrastre.map((link) =>{
         return( 
             <React.Fragment>
                 <ProductItem 
@@ -27,13 +36,14 @@ const Products = () => {
                     name={link.name}
                     image={link.image}
                     price={link.price}
+                    mark={link.mark}
                     in_="in-products"
                 />
             </React.Fragment>
         )
     });
 
-    const listSistemaElectrico =  llantas.map((link) =>{
+    const listSistemaElectrico =  sistemaElectrico.map((link) =>{
         return( 
             <React.Fragment>
                 <ProductItem 
@@ -41,13 +51,14 @@ const Products = () => {
                     name={link.name}
                     image={link.image}
                     price={link.price}
+                    mark={link.mark}
                     in_="in-products"
                 />
             </React.Fragment>
         )
     });
 
-    const listSistemaMotor =  llantas.map((link) =>{
+    const listSistemaMotor =  sistemaMotor.map((link) =>{
         return( 
             <React.Fragment>
                 <ProductItem 
@@ -55,6 +66,7 @@ const Products = () => {
                     name={link.name}
                     image={link.image}
                     price={link.price}
+                    mark={link.mark}
                     in_="in-products"
                 />
             </React.Fragment>
@@ -62,7 +74,7 @@ const Products = () => {
     });
 
 
-    const listLuces =  llantas.map((link) =>{
+    const listLuces =  luces.map((link) =>{
         return( 
             <React.Fragment>
                 <ProductItem 
@@ -70,13 +82,14 @@ const Products = () => {
                     name={link.name}
                     image={link.image}
                     price={link.price}
+                    mark={link.mark}
                     in_="in-products"
                 />
             </React.Fragment>
         )
     });
 
-    const listAccesorioMotor =  llantas.map((link) =>{
+    const listAccesorioMotor =  accesoriosMotor.map((link) =>{
         return( 
             <React.Fragment>
                 <ProductItem 
@@ -84,13 +97,14 @@ const Products = () => {
                     name={link.name}
                     image={link.image}
                     price={link.price}
+                    mark={link.mark}
                     in_="in-products"
                 />
             </React.Fragment>
         )
     });
 
-    const listAccesorioPiloto =  llantas.map((link) =>{
+    const listAccesorioPiloto =  accesoriosPiloto.map((link) =>{
         return( 
             <React.Fragment>
                 <ProductItem 
@@ -98,13 +112,14 @@ const Products = () => {
                     name={link.name}
                     image={link.image}
                     price={link.price}
+                    mark={link.mark}
                     in_="in-products"
                 />
             </React.Fragment>
         )
     });
 
-    const listSistemaFrenos =  llantas.map((link) =>{
+    const listSistemaFrenos =  sistemaFrenos.map((link) =>{
         return( 
             <React.Fragment>
                 <ProductItem 
@@ -112,6 +127,7 @@ const Products = () => {
                     name={link.name}
                     image={link.image}
                     price={link.price}
+                    mark={link.mark}
                     in_="in-products"
                 />
             </React.Fragment>
