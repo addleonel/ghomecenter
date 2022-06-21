@@ -4,6 +4,12 @@ from .models import ContactModel
 def welcome_view(request):
     return render(request, 'build/index.html')
 
+def products_view(request):
+    return render(request, 'build/index.html')
+
+def about_view(request):
+    return render(request, 'build/index.html')
+
 def contact_view(request):
     if request.method == 'POST':
         name = request.POST.get('name')
