@@ -1,19 +1,18 @@
 import React , { useState, useEffect } from "react";
 import Slider from "react-slick";
-import { Container, Button, Modal} from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import "../assets/styles/Main.scss";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import buttonURL from "../utils.js";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-// product images
+// products
+import ProductItem from "./ProductItem";
+import { llantas, sistemaArrastre } from "../productsList.js";
 
 const Main = () => {
 	const contactURL = buttonURL;
-	const [show, setShow] = useState(false);
-	const handleClose = () => setShow(false);
-	const handleShow = () => setShow(true);
 	const [showp, setShowp] = useState(5);
 	const sliderState = {
 		dots: false,
@@ -62,7 +61,134 @@ const Main = () => {
 		});
 	}, []);
 
+	const listLlantas =  llantas.map((link) =>{
+        return( 
+            <React.Fragment>
+				<div>
+					<ProductItem 
+						key={link.id}
+						name={link.name}
+						image={link.image}
+						price={link.price}
+						in_=""
+					/>
+				</div>
+            </React.Fragment>
+        )
+    });
 
+    const listSistemaArrastre =  sistemaArrastre.map((link) =>{
+        return( 
+            <React.Fragment>
+				<div>
+					<ProductItem 
+						key={link.id}
+						name={link.name}
+						image={link.image}
+						price={link.price}
+						in_=""
+					/>
+				</div>
+            </React.Fragment>
+        )
+    });
+
+    const listSistemaElectrico =  llantas.map((link) =>{
+        return( 
+            <React.Fragment>
+                <div>
+					<ProductItem 
+						key={link.id}
+						name={link.name}
+						image={link.image}
+						price={link.price}
+						in_=""
+					/>
+				</div>
+            </React.Fragment>
+        )
+    });
+
+    const listSistemaMotor =  llantas.map((link) =>{
+        return( 
+            <React.Fragment>
+                <div>
+					<ProductItem 
+						key={link.id}
+						name={link.name}
+						image={link.image}
+						price={link.price}
+						in_=""
+					/>
+				</div>
+            </React.Fragment>
+        )
+    });
+
+
+    const listLuces =  llantas.map((link) =>{
+        return( 
+            <React.Fragment>
+                <div>
+					<ProductItem 
+						key={link.id}
+						name={link.name}
+						image={link.image}
+						price={link.price}
+						in_=""
+					/>
+				</div>
+            </React.Fragment>
+        )
+    });
+
+    const listAccesorioMotor =  llantas.map((link) =>{
+        return( 
+            <React.Fragment>
+                <div>
+					<ProductItem 
+						key={link.id}
+						name={link.name}
+						image={link.image}
+						price={link.price}
+						in_=""
+					/>
+				</div>
+            </React.Fragment>
+        )
+    });
+
+    const listAccesorioPiloto =  llantas.map((link) =>{
+        return( 
+            <React.Fragment>
+                <div>
+					<ProductItem 
+						key={link.id}
+						name={link.name}
+						image={link.image}
+						price={link.price}
+						in_=""
+					/>
+				</div>
+            </React.Fragment>
+        )
+    });
+
+    const listSistemaFrenos =  llantas.map((link) =>{
+        return( 
+            <React.Fragment>
+                <div>
+					<ProductItem 
+						key={link.id}
+						name={link.name}
+						image={link.image}
+						price={link.price}
+						in_=""
+					/>
+				</div>
+            </React.Fragment>
+        )
+    });
 	return (
 		<React.Fragment>
 			<section className="section-m section-1">
@@ -97,359 +223,61 @@ const Main = () => {
 					<h2 className="category">Llantas</h2>
 					<div className="c-container">
 						<Slider {...sliderState}>
-							<div>
-								<div className="c-item">
-									<p href="/" className="c-image">
-										<img src="https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg" width="300px" alt="" />
-									</p>
-									<p className="c-title">
-										Apple Macbook Air 11-incj MD233LL/A 4GB RAM. 128GB SSD - Silver
-									</p>
-									<p className="c-price">
-										s/1,999.00
-									</p>
-									<Button variant="primary" className="c-book" onClick={handleShow}>
-										Reservar
-									</Button>
-								</div>
-							</div>
-							<div>
-								<div className="c-item">
-									<a href="/" className="c-image">
-										<img src="https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg" width="300px" alt="" />
-									</a>
-									<a href="/" className="c-title">
-										Apple Macbook Air 11-incj MD233LL/A 4GB RAM. 128GB SSD - Silver
-									</a>
-									
-									<p className="c-price">
-										s/1,999.00
-									</p>
-								</div>
-							</div>
-							<div>
-								<div className="c-item">
-									<a href="/" className="c-image">
-										<img src="https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg" width="300px" alt="" />
-									</a>
-									<a href="/" className="c-title">
-										Apple Macbook Air 11-incj MD233LL/A 4GB RAM. 128GB SSD - Silver
-									</a>
-									
-									<p className="c-price">
-										s/1,999.00
-									</p>
-								</div>
-							</div>
-							<div>
-								<div className="c-item">
-									<a href="/" className="c-image">
-										<img src="https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg" width="300px" alt="" />
-									</a>
-									<a href="/" className="c-title">
-										Apple Macbook Air 11-incj MD233LL/A 4GB RAM. 128GB SSD - Silver
-									</a>
-									
-									<p className="c-price">
-										s/1,999.00
-									</p>
-								</div>
-							</div>
-							<div>
-								<div className="c-item">
-									<a href="/" className="c-image">
-										<img src="https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg" width="300px" alt="" />
-									</a>
-									<a href="/" className="c-title">
-										Apple Macbook Air 11-incj MD233LL/A 4GB RAM. 128GB SSD - Silver
-									</a>
-									
-									<p className="c-price">
-										s/1,999.00
-									</p>
-								</div>
-							</div>
-							<div>
-								<div className="c-item">
-									<a href="/" className="c-image">
-										<img src="https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg" width="300px" alt="" />
-									</a>
-									<a href="/" className="c-title">
-										Apple Macbook Air 11-incj MD233LL/A 4GB RAM. 128GB SSD - Silver
-									</a>
-									
-									<p className="c-price">
-										s/1,999.00
-									</p>
-								</div>
-							</div>
-							<div>
-								<div className="c-item">
-									<a href="/" className="c-image">
-										<img src="https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg" width="300px" alt="" />
-									</a>
-									<a href="/" className="c-title">
-										Apple Macbook Air 11-incj MD233LL/A 4GB RAM. 128GB SSD - Silver
-									</a>
-									
-									<p className="c-price">
-										s/1,999.00
-									</p>
-								</div>
-							</div>
+							{listLlantas}
 						</Slider>
 						<HashLink style={{textDecoration: "none"}} to="/products/#llantas">Ver más</HashLink>
 					</div>
 					<h2 className="category">Sistema de arrastre</h2>
 					<div className="c-container">
 						<Slider {...sliderState}>
-							<div>
-								<div className="c-item">
-									<a href="/" className="c-image">
-										<img src="https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg" width="300px" alt="" />
-									</a>
-									<a href="/" className="c-title">
-										Apple Macbook Air 11-incj MD233LL/A 4GB RAM. 128GB SSD - Silver
-									</a>
-									
-									<p className="c-price">
-										s/1,999.00
-									</p>
-								</div>
-							</div>
-							<div>
-								<div className="c-item">
-									<a href="/" className="c-image">
-										<img src="https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg" width="300px" alt="" />
-									</a>
-									<a href="/" className="c-title">
-										Apple Macbook Air 11-incj MD233LL/A 4GB RAM. 128GB SSD - Silver
-									</a>
-									
-									<p className="c-price">
-										s/1,999.00
-									</p>
-								</div>
-							</div>
-							<div>
-								<div className="c-item">
-									<a href="/" className="c-image">
-										<img src="https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg" width="300px" alt="" />
-									</a>
-									<a href="/" className="c-title">
-										Apple Macbook Air 11-incj MD233LL/A 4GB RAM. 128GB SSD - Silver
-									</a>
-									
-									<p className="c-price">
-										s/1,999.00
-									</p>
-								</div>
-							</div>
-							<div>
-								<div className="c-item">
-									<a href="/" className="c-image">
-										<img src="https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg" width="300px" alt="" />
-									</a>
-									<a href="/" className="c-title">
-										Apple Macbook Air 11-incj MD233LL/A 4GB RAM. 128GB SSD - Silver
-									</a>
-									
-									<p className="c-price">
-										s/1,999.00
-									</p>
-								</div>
-							</div>
-							<div>
-								<div className="c-item">
-									<a href="/" className="c-image">
-										<img src="https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg" width="300px" alt="" />
-									</a>
-									<a href="/" className="c-title">
-										Apple Macbook Air 11-incj MD233LL/A 4GB RAM. 128GB SSD - Silver
-									</a>
-									
-									<p className="c-price">
-										s/1,999.00
-									</p>
-								</div>
-							</div>
-							<div>
-								<div className="c-item">
-									<a href="/" className="c-image">
-										<img src="https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg" width="300px" alt="" />
-									</a>
-									<a href="/" className="c-title">
-										Apple Macbook Air 11-incj MD233LL/A 4GB RAM. 128GB SSD - Silver
-									</a>
-									
-									<p className="c-price">
-										s/1,999.00
-									</p>
-								</div>
-							</div>
-							<div>
-								<div className="c-item">
-									<a href="/" className="c-image">
-										<img src="https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg" width="300px" alt="" />
-									</a>
-									<a href="/" className="c-title">
-										Apple Macbook Air 11-incj MD233LL/A 4GB RAM. 128GB SSD - Silver
-									</a>
-									
-									<p className="c-price">
-										s/1,999.00
-									</p>
-								</div>
-							</div>
+							{listSistemaArrastre}
 						</Slider>
 						<HashLink style={{textDecoration: "none"}} to="/products/#sistema-arrastre">Ver más</HashLink>
 					</div>
 					<h2 className="category">Sistema Electrico</h2>
 					<div className="c-container">
 						<Slider {...sliderState}>
-							<div>
-								<div className="c-item">
-									<a href="/" className="c-image">
-										<img src="https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg" width="300px" alt="" />
-									</a>
-									<a href="/" className="c-title">
-										Apple Macbook Air 11-incj MD233LL/A 4GB RAM. 128GB SSD - Silver
-									</a>
-									
-									<p className="c-price">
-										s/1,999.00
-									</p>
-								</div>
-							</div>
-							<div>
-								<div className="c-item">
-									<a href="/" className="c-image">
-										<img src="https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg" width="300px" alt="" />
-									</a>
-									<a href="/" className="c-title">
-										Apple Macbook Air 11-incj MD233LL/A 4GB RAM. 128GB SSD - Silver
-									</a>
-									
-									<p className="c-price">
-										s/1,999.00
-									</p>
-								</div>
-							</div>
-							<div>
-								<div className="c-item">
-									<a href="/" className="c-image">
-										<img src="https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg" width="300px" alt="" />
-									</a>
-									<a href="/" className="c-title">
-										Apple Macbook Air 11-incj MD233LL/A 4GB RAM. 128GB SSD - Silver
-									</a>
-									
-									<p className="c-price">
-										s/1,999.00
-									</p>
-								</div>
-							</div>
-							<div>
-								<div className="c-item">
-									<a href="/" className="c-image">
-										<img src="https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg" width="300px" alt="" />
-									</a>
-									<a href="/" className="c-title">
-										Apple Macbook Air 11-incj MD233LL/A 4GB RAM. 128GB SSD - Silver
-									</a>
-									
-									<p className="c-price">
-										s/1,999.00
-									</p>
-								</div>
-							</div>
-							<div>
-								<div className="c-item">
-									<a href="/" className="c-image">
-										<img src="https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg" width="300px" alt="" />
-									</a>
-									<a href="/" className="c-title">
-										Apple Macbook Air 11-incj MD233LL/A 4GB RAM. 128GB SSD - Silver
-									</a>
-									
-									<p className="c-price">
-										s/1,999.00
-									</p>
-								</div>
-							</div>
-							<div>
-								<div className="c-item">
-									<a href="/" className="c-image">
-										<img src="https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg" width="300px" alt="" />
-									</a>
-									<a href="/" className="c-title">
-										Apple Macbook Air 11-incj MD233LL/A 4GB RAM. 128GB SSD - Silver
-									</a>
-									
-									<p className="c-price">
-										s/1,999.00
-									</p>
-								</div>
-							</div>
-							<div>
-								<div className="c-item">
-									<a href="/" className="c-image">
-										<img src="https://m.media-amazon.com/images/I/61qBw-N4g1L._AC_SL1024_.jpg" width="300px" alt="" />
-									</a>
-									<a href="/" className="c-title">
-										Apple Macbook Air 11-incj MD233LL/A 4GB RAM. 128GB SSD - Silver
-									</a>
-									
-									<p className="c-price">
-										s/1,999.00
-									</p>
-								</div>
-							</div>
+							{listSistemaElectrico}
 						</Slider>
 						<HashLink style={{textDecoration: "none"}}to="/products/#sistema-electrico">Ver más</HashLink>
 					</div>
 					<h2 className="category">Sistema de Motor</h2>
 					<div className="c-container">
+						<Slider {...sliderState}>
+							{listSistemaMotor}
+						</Slider>
 						<HashLink style={{textDecoration: "none"}}to="/products/#sistema-electrico">Ver más</HashLink>
 					</div>
 					<h2 className="category">Luces</h2>
 					<div className="c-container">
+						<Slider {...sliderState}>
+							{listLuces}
+						</Slider>
 						<HashLink style={{textDecoration: "none"}}to="/products/#luces">Ver más</HashLink>
 					</div>
-					<h2 className="category">Accesorios de Motor</h2>
+					<h2 className="category">Accesorios para Motor</h2>
 					<div className="c-container">
+						<Slider {...sliderState}>
+							{listAccesorioMotor}
+						</Slider>
 						<HashLink style={{textDecoration: "none"}}to="/products/#accesorios-motor">Ver más</HashLink>
 					</div>
-					<h2 className="category">Accesorios de Piloto</h2>
+					<h2 className="category">Accesorios para Piloto</h2>
 					<div className="c-container">
+						<Slider {...sliderState}>
+							{listAccesorioPiloto}
+						</Slider>
 						<HashLink style={{textDecoration: "none"}}to="/products/#accesorios-piloto">Ver más</HashLink>
 					</div>
 					<h2 className="category">Sistemas de frenos</h2>
 					<div className="c-container">
+						<Slider {...sliderState}>
+							{listSistemaFrenos}
+						</Slider>
 						<HashLink style={{textDecoration: "none"}}to="/products/#sistemas-frenos">Ver más</HashLink>
 					</div>
 				</Container>
 			</section>
-
-			<Modal show={show} onHide={handleClose}>
-				<Modal.Header closeButton>
-				<Modal.Title>Reservar Producto</Modal.Title>
-				</Modal.Header>
-				<Modal.Body>
-					<p>
-					Para reservar este producto, usted debe contactarse con nosotros
-					especificando el producto en el mensaje
-					</p>
-				</Modal.Body>
-				<Modal.Footer>
-				<Button variant="secondary" onClick={handleClose}>
-					cerrar
-				</Button>
-				<Button variant="primary" onClick={() => window.location.href = contactURL}>
-					Contactar
-				</Button>
-				</Modal.Footer>
-			</Modal>
 		</React.Fragment>
   );
 }
