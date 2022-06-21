@@ -61,7 +61,7 @@ const Main = () => {
 		});
 	}, []);
 
-	const listLlantas =  llantas.map((link) =>{
+	const listLlantas =  llantas.slice(0, 7).map((link) =>{
         return( 
             <React.Fragment>
 				<div>
@@ -77,7 +77,7 @@ const Main = () => {
         )
     });
 
-    const listSistemaArrastre =  sistemaArrastre.map((link) =>{
+    const listSistemaArrastre =  sistemaArrastre.slice(0, 7).map((link) =>{
         return( 
             <React.Fragment>
 				<div>
@@ -93,7 +93,7 @@ const Main = () => {
         )
     });
 
-    const listSistemaElectrico =  llantas.map((link) =>{
+    const listSistemaElectrico =  llantas.slice(0, 7).map((link) =>{
         return( 
             <React.Fragment>
                 <div>
@@ -109,7 +109,7 @@ const Main = () => {
         )
     });
 
-    const listSistemaMotor =  llantas.map((link) =>{
+    const listSistemaMotor =  llantas.slice(0, 7).map((link) =>{
         return( 
             <React.Fragment>
                 <div>
@@ -126,7 +126,7 @@ const Main = () => {
     });
 
 
-    const listLuces =  llantas.map((link) =>{
+    const listLuces =  llantas.slice(0, 7).map((link) =>{
         return( 
             <React.Fragment>
                 <div>
@@ -142,7 +142,7 @@ const Main = () => {
         )
     });
 
-    const listAccesorioMotor =  llantas.map((link) =>{
+    const listAccesorioMotor =  llantas.slice(0, 7).map((link) =>{
         return( 
             <React.Fragment>
                 <div>
@@ -158,7 +158,7 @@ const Main = () => {
         )
     });
 
-    const listAccesorioPiloto =  llantas.map((link) =>{
+    const listAccesorioPiloto =  llantas.slice(0, 7).map((link) =>{
         return( 
             <React.Fragment>
                 <div>
@@ -174,7 +174,7 @@ const Main = () => {
         )
     });
 
-    const listSistemaFrenos =  llantas.map((link) =>{
+    const listSistemaFrenos =  llantas.slice(0, 7).map((link) =>{
         return( 
             <React.Fragment>
                 <div>
