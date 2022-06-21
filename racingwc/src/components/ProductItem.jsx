@@ -8,7 +8,7 @@ const ProductItem= (props) => {
 	const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
-    const class_= "c-item" + ` ${props.in_}`;
+    const class_= "c-item" + props.in_;
     return (
         <React.Fragment>
             <div className={class_}>

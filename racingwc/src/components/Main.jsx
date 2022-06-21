@@ -9,7 +9,7 @@ import buttonURL from "../utils.js";
 
 // products
 import ProductItem from "./ProductItem";
-import { llantas, sistemaArrastre } from "../productsList.js";
+import { llantas, sistemaArrastre, accesoriosPiloto } from "../productsList.js";
 
 const Main = () => {
 	const contactURL = buttonURL;
@@ -30,6 +30,14 @@ const Main = () => {
 		});
 	}, []);
 
+	useEffect(()=>{	
+		window.addEventListener('locationchange', ()=> {
+			if (window.innerWidth <= 450) {
+				setShowp(1);
+			}
+		});
+	}, []);
+	
 	useEffect(()=>{	
 		window.addEventListener('resize', () => {
 			if (window.innerWidth <= 1160) {

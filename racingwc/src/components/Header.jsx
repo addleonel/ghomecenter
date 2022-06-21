@@ -92,10 +92,10 @@ const Header = () => {
     <React.Fragment>
       <nav id="navbarroot-id" className="navbarroot">
         <Container fluid="xxl" className="nav-bar"> 
-            <Link className="nav-bar__logo" to="/">
+            <a className="nav-bar__logo" href="/">
               <img className="nav-bar__logo-image" src="https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/logo/logo.png"alt=""/>
                  <span className="nav-bar__logo-text">Rosales Racing Motors</span>
-            </Link>
+            </a>
             <button className="nav-bar__button-item nav-bar__buttons-item--subscribe nav-bar__buttons-item--subscribe-responsive" onClick={() => window.location.href = contactURL}>Contactar</button>
             
             <div className="nav-bar__display" id="nav-bar__display-id" onClick={ displayResponsive }>
