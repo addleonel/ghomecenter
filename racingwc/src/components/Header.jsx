@@ -60,39 +60,6 @@ const Header = () => {
     document.getElementById('navbarroot-id').style.background = '#fff';
   }
 
-  // // display company options 
-  // useEffect(() => {
-  //   let buttonoptions = document.getElementById('nav-bar__buttons-item--company-id');
-  //   let options = document.getElementById('nav-bar-options-company-id');
-  //   let optionsContainer = document.getElementById('nav-bar-options-company-container-id');
-  //   buttonoptions.addEventListener('mouseover', () => {
-  //     options.style.display = 'block';
-  //     optionsContainer.style.display = 'block';
-  //     document.getElementById('navbarroot-id').style.background = 'transparent';
-  //   });
-  //   buttonoptions.addEventListener('mouseout', () => {
-  //     options.style.display = 'none';
-  //     optionsContainer.style.display = 'none';
-  //   });
-  //   options.addEventListener('mousemove', () => {
-  //     options.style.display = 'block';
-  //     optionsContainer.style.display = 'block';
-  //     document.getElementById('navbarroot-id').style.background = 'transparent';
-  //   });
-  //   options.addEventListener('mouseleave', () => {
-  //     options.style.display = 'none';
-  //     optionsContainer.style.display = 'none';
-  //     document.getElementById('navbarroot-id').style.background = '#fff';
-  //   });     
-  // });
-  
-  // const hideCompanyOptions = () => {
-  //   let options = document.getElementById('nav-bar-options-company-id');
-  //   let optionsContainer = document.getElementById('nav-bar-options-company-container-id');
-  //   options.style.display = 'none';
-  //   optionsContainer.style.display = 'none';
-  //   document.getElementById('navbarroot-id').style.background = '#fff';
-  // }
   // reponsive options
   const displayResponsive = (e) => {
     e.preventDefault();
@@ -105,7 +72,7 @@ const Header = () => {
   }
 
   const disableMenu = (e) => {
-      e.preventDefault();
+
       let responsiveBlock = document.getElementById("nav-bar__responsive");
       if (responsiveBlock.className === "nav-bar__responsive--block") {
           responsiveBlock.className = "nav-bar__responsive--none";
@@ -117,7 +84,6 @@ const Header = () => {
       let menu = document.getElementById("nav-bar__responsive-list-id");
       menu.style.display = "block";
   }
-
 
   return (
     <React.Fragment>
@@ -160,9 +126,9 @@ const Header = () => {
         </div>
       <section id="nav-bar__responsive" className="nav-bar__responsive--none"  onClick={ disableMenu }>
         <ul id="nav-bar__responsive-list-id" className="nav-bar__responsive-list" onClick={ enableMenu }>
-            <li className="nav-bar__responsive-li" ><Link className="nav-bar__responsive-item" to="/about/">Sobre Nosotros</Link></li>
-            <li className="nav-bar__responsive-li" ><Link className="nav-bar__responsive-item" to="/contact/" onClick={() => window.location.href = contactURL}>Contacto</Link></li>
-            <li className="nav-bar__responsive-li" ><Link className="nav-bar__responsive-item" to="/products/">Productos</Link></li>
+            <li className="nav-bar__responsive-li" ><Link id="about-res"  onClick={ disableMenu } className="nav-bar__responsive-item" to="/about/">Sobre Nosotros</Link></li>
+            <li className="nav-bar__responsive-li" ><Link id="contact-res" className="nav-bar__responsive-item" to="/contact/" onClick={() => window.location.href = contactURL}>Contacto</Link></li>
+            <li className="nav-bar__responsive-li" ><Link id="products-res"  onClick={ disableMenu } className="nav-bar__responsive-item" to="/products/">Productos</Link></li>
         </ul>                                                       
       </section>
     </React.Fragment>
