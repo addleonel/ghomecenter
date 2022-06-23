@@ -244,6 +244,58 @@ const Main = () => {
 			</section>
 			<section className="section-m section-2">
 				<Container fluid="xxl">
+					<div className="c-container">
+						<Slider {...sliderState}>
+							<div>
+								<HashLink to="/products/#llantas" className="circle-image">
+									<img style={{borderRadius: "50%"}} src="https://images.pexels.com/photos/5806190/pexels-photo-5806190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"  alt="" />
+									<p>Llantas</p>
+								</HashLink>
+							</div>
+							<div>
+								<HashLink to="/products/#sistema-arrastre" className="circle-image">
+									<img style={{borderRadius: "50%"}} src="https://images.pexels.com/photos/1119796/pexels-photo-1119796.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+									<p>Sistema de arrastre</p>
+								</HashLink>
+							</div>
+							<div>
+								<HashLink to="/products/#sistema-electrico" className="circle-image">
+									<img style={{borderRadius: "50%"}} src="https://images.pexels.com/photos/2948297/pexels-photo-2948297.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+									<p>Sistema electrico</p>
+								</HashLink>
+							</div>
+							<div>
+								<HashLink to="/products/#sistema-motor" className="circle-image">
+									<img style={{borderRadius: "50%"}} src="https://images.pexels.com/photos/8550641/pexels-photo-8550641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+									<p>Sistema de motor</p>
+								</HashLink>
+							</div>
+							<div>
+								<HashLink to="/products/#luces" className="circle-image">
+									<img style={{borderRadius: "50%"}} src="https://images.pexels.com/photos/1253640/pexels-photo-1253640.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+									<p>Luces</p>
+								</HashLink>
+							</div>
+							<div>
+								<HashLink to="/products/#accesorios-motor" className="circle-image">
+									<img style={{borderRadius: "50%"}} src="https://images.pexels.com/photos/1407130/pexels-photo-1407130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+									<p>Accesorios para motor</p>
+								</HashLink>
+							</div>
+							<div>
+								<HashLink to="/products/#accesorios-piloto" className="circle-image">
+									<img style={{borderRadius: "50%"}} src="https://images.pexels.com/photos/9835238/pexels-photo-9835238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+									<p>Accesorios para piloto</p>
+								</HashLink>
+							</div>
+							<div>
+								<HashLink to="/products/#sistemas-frenos" className="circle-image">
+									<img style={{borderRadius: "50%"}} src="https://images.pexels.com/photos/2377903/pexels-photo-2377903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+									<p>Sistemas de frenos</p>
+								</HashLink>
+							</div>
+						</Slider>
+					</div>
 					<h2 className="category">Llantas</h2>
 					<div className="c-container">
 						<Slider {...sliderState}>
@@ -270,7 +322,7 @@ const Main = () => {
 						<Slider {...sliderState}>
 							{listSistemaMotor}
 						</Slider>
-						<HashLink style={{textDecoration: "none"}}to="/products/#sistema-electrico">Ver más</HashLink>
+						<HashLink style={{textDecoration: "none"}}to="/products/#sistema-motor">Ver más</HashLink>
 					</div>
 					<h2 className="category">Luces</h2>
 					<div className="c-container">

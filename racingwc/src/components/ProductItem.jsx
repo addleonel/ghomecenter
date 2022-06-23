@@ -45,12 +45,11 @@ const ProductItem= (props) => {
                                 S/ {props.price}
                             </p>
                         </div>
+                        
                     </Modal.Body>
                     <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                        cerrar
-                    </Button>
-                    <Button variant="primary" onClick={() => window.location.href = contactURL}>
+                    
+                    <Button className="modal-contact-button" variant="primary" onClick={() => window.location.href = contactURL}>
                         Contactar
                     </Button>
                     </Modal.Footer>
