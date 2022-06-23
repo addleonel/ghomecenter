@@ -140,10 +140,18 @@
 // .in-products {
 //     margin-right: 30px;
 // }
+.modal-content {
+    border-radius: 20px !important;
+    border: none !important;
+    padding: 20px 30px;
+}
+
 .modal-header {
     border-bottom: none !important;
+
 }
 .modal-contact-button {
+    width: 100%;
     color: #fff !important;
     background-color: #573eff !important;
     border: none !important;
@@ -151,6 +159,15 @@
     padding: 10px 20px !important;
     font-size: 18px !important;
     box-shadow: none !important;
+}
+
+.content-modal-elements {
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal-image {
+    object-fit: contain;
 }
 
 .c-item:hover {
@@ -211,6 +228,10 @@
     transition: all .4s;
 }
 
+.slick-next {
+    right: 0%;
+}
+
 // products
 .products {
     display: grid;
@@ -224,9 +245,33 @@
         width: 100%;
     }
 
-    .slick-arrow {
-        display: none;
+    .portal-title {
+        font-size: 2.3rem;
     }
+
+    .portal-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .principal__message-button {
+        font-size: 1.2rem;
+        width: 100%;
+    }
+
+    .slick-arrow {
+        display: none !important;
+    }
+
+    .modal-content {
+        padding: 0;
+    }
+    
+    .modal-image {
+        width: 100%;
+        height: 300px;
+        object-fit: contain;
+    }
+   
  }
 
  @media screen and (max-width: 1286px) {
@@ -260,6 +305,11 @@
         border-radius: 50%;
         object-fit: cover;
     }
+
+    // .slick-next {
+    //     right: 5%;
+       
+    // }
 }
 
 @media screen and (max-width: 1136px) {
@@ -270,4 +320,14 @@
     .section-1-content {
         grid-template-columns: 1fr;
     }
+
+    
+}
+
+
+@media screen and (max-width: 1000px) {
+
+.content-modal-elements {
+    flex-wrap: wrap;
+}
 }

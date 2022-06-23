@@ -25,34 +25,33 @@ const ProductItem= (props) => {
                     Reservar
                 </Button>
             
-                <Modal show={show} onHide={handleClose} centered  style={{ borderRadius: "10px !important",}}>
+                <Modal show={show} onHide={handleClose} size="lg" centered  style={{ borderRadius: "10px !important",}}>
                     <Modal.Header closeButton>
-                    <Modal.Title>Reservar Producto</Modal.Title>
+                    <Modal.Title style={{fontWeight: "bold"}}>Reservar Producto</Modal.Title>
                     </Modal.Header>
                     <Modal.Body >
-                        <p>
-                        Para reservar este producto, usted debe contactarse con nosotros
-                        especificando el producto y su marca en el mensaje
-                        </p>
-                        {/* <div className="c-image">
-                        </div> */}
-                        <div style={{display:"flex", flexDirection: "column", alignItems:"center",}}>
-                            <img src={props.image} width="250px" alt="" />
-                            <p className="c-title">
-                            {props.name} - {props.mark}
-                            </p>
-                            <p className="c-price" style={{backgroundColor:"#ffd7bf", padding:"10px 20px", borderRadius: "10px",}}>
-                                S/ {props.price}
-                            </p>
+                       
+                        <div className="content-modal-elements">
+                            <img className="modal-image" src={props.image} width="250px" alt="" />
+                            <div style={{margin: "10px 20px",}}>
+                                <p>
+                                Para reservar este producto, usted debe contactarse con nosotros
+                                especificando el producto y su marca en el mensaje
+                                </p>
+                                <p className="c-title" style={{fontWeight:"bold"}}>
+                                {props.name} - {props.mark}
+                                </p>
+                                <p className="c-price" style={{textAlign:"center", backgroundColor:"#ffd7bf", padding:"10px 20px", borderRadius: "10px",}}>
+                                    S/ {props.price}
+                                </p>
+                                <Button className="modal-contact-button" variant="primary" onClick={() => window.location.href = contactURL}>
+                                    Contactar y hacer reserva
+                                </Button>
+                            </div>
                         </div>
-                        
+                       
                     </Modal.Body>
-                    <Modal.Footer>
                     
-                    <Button className="modal-contact-button" variant="primary" onClick={() => window.location.href = contactURL}>
-                        Contactar
-                    </Button>
-                    </Modal.Footer>
                 </Modal>
             </div>
         </React.Fragment>

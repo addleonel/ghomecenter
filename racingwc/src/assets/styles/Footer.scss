@@ -68,12 +68,22 @@ $buttons_background: #efefef;
 
 .redwoman {
     width: 600px;
-    height: 420px;
+    height: 400px;
     position: absolute;
-    bottom: -40px;
-    right: 10%;
+    bottom: -10px;
+    right: 0%;
     z-index: 1;
     filter: saturate(68%) brightness(1.2);
+}
+
+
+@media screen and (max-width: 1286px) {
+    .redwoman {
+        width: 400px;
+        height: auto;
+        bottom: 100%;
+        right: 0;
+    }
 }
 
 @media screen and (max-width: 750px) {
