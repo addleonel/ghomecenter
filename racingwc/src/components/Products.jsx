@@ -1,8 +1,15 @@
 import * as React from "react";
-import { Container } from "react-bootstrap";
+import { Container,
+    Tab, 
+    Row, 
+    Nav, 
+    Col,
+
+} from "react-bootstrap";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "../assets/styles/Main.scss";
 import ProductItem from "./ProductItem";
+import { HashLink } from "react-router-hash-link";
 import {llantas, 
     sistemaArrastre,
     sistemaElectrico,
@@ -136,52 +143,126 @@ const Products = () => {
 
     return (
     <React.Fragment>
-        <section style={{backgroundColor: "#99cdff"}} className="section-m section-1">
+        <section className="section-p section-1">
             <Container fluid="xxl">
                 <div className="portal-phrase">
                     <h1 className="portal-title">
-                    Descubre nuestros productos
+                        Descubre nuestros productos
                     </h1>
                     <p className="portal-subtitle">
                         Explora nuestro catalogo
-                        
                     </p>
                 </div>
             </Container>
         </section>
-        <Container fluid="xxl">
-            <h2 id="llantas" className="category">Llantas </h2>
-            <div className="products">
-                {listLlantas}
-            </div>
-            <h2 id="sistema-arrastre" className="category">Sistema de arrastre</h2>
-            <div className="products">   
-                {listSistemaArrastre}
-            </div>
-            <h2 id="sistema-electrico" className="category">Sistema electrico</h2>
-            <div className="products">   
-                {listSistemaElectrico}
-            </div>
-            <h2 id="sistema-motor" className="category">Sistema de motor</h2>
-            <div className="products">   
-                {listSistemaMotor}
-            </div>
-            <h2 id="luces" className="category">Luces</h2>
-            <div className="products">   
-                {listLuces}
-            </div>
-            <h2 id="accesorios-motor" className="category">Accesorios para motor</h2>
-            <div className="products">   
-                {listAccesorioMotor}
-            </div>
-            <h2 id="accesorios-piloto" className="category">Accesorios para piloto</h2>
-            <div className="products">   
-                {listAccesorioPiloto}
-            </div>
-            <h2 id="sistemas-frenos" className="category">Sistema de frenos</h2>
-            <div className="products">   
-                {listSistemaFrenos}
-            </div>
+        <section className="category-menu-container">
+            <Container>
+                <div className="category-menu-list marquee">
+                    <HashLink  to="/products/#llantas" className="category-menu-item__link">Llantas</HashLink>
+                    <HashLink  to="/products/#sistema-arrastre" className="category-menu-item__link">Sistema de arrastre</HashLink>
+                    <HashLink  to="/products/#sistema-electrico" className="category-menu-item__link">Sistema electrico</HashLink>
+                    <HashLink  to="/products/#sistema-motor" className="category-menu-item__link">sistema de motor</HashLink>
+                    <HashLink  to="/products/#luces" className="category-menu-item__link">Luces</HashLink>
+                    <HashLink  to="/products/#accesorios-motor" className="category-menu-item__link">Accesorios para motor</HashLink>
+                    <HashLink  to="/products/#accesorios-piloto" className="category-menu-item__link">Accesorios para piloto</HashLink>
+                    <HashLink  to="/products/#sistemas-frenos" className="category-menu-item__link">Sistema de frenos</HashLink>
+                </div>
+            </Container>
+        </section>
+        <span id="llantas"></span>
+        <span id="sistema-arrastre"></span>
+        <span id="sistema-electrico"></span>
+        <span id="sistema-motor"></span>
+        <span id="luces"></span>
+        <span id="accesorios-motor"></span>       
+        <span id="accesorios-piloto"></span>
+        <span id="sistemas-frenos"></span>
+        <Container fluid="xxl" >
+            <Tab.Container id="left-tabs-example" defaultActiveKey="1">
+                <Row className="left-tabs-example">
+                    <Col sm={3}>
+                    <Nav variant="pills" className="flex-column">
+                        <Nav.Item>
+                            <Nav.Link  eventKey="1" >Llantas</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link eventKey="2">Sistema de arrastre</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link eventKey="3">Sistema electrico</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link eventKey="4">Sistema de motor</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link eventKey="5">Luces</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link eventKey="6">Accesorios para motor</Nav.Link>
+                        </Nav.Item>
+
+                        <Nav.Item>
+                            <Nav.Link eventKey="7">Accesorios para piloto</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link eventKey="8">Sistema de frenos</Nav.Link>
+                        </Nav.Item>                                                    
+                    </Nav>
+                    </Col>
+                    <Col sm={9}>
+                    <Tab.Content>
+                        <Tab.Pane eventKey="1">
+                            <h2 id="llantas" >Llantas </h2>
+                            <div className="products">
+                                {listLlantas}
+                            </div>
+                        </Tab.Pane>
+                        <Tab.Pane eventKey="2">
+                            <h2 id="sistema-arrastre">Sistema de arrastre</h2>
+                            <div className="products">   
+                                {listSistemaArrastre}
+                            </div>
+                        </Tab.Pane>
+                        <Tab.Pane eventKey="3">
+                            <h2 id="sistema-electrico">Sistema electrico</h2>
+                            <div className="products">   
+                                {listSistemaElectrico}
+                            </div>
+                        </Tab.Pane>
+                        <Tab.Pane eventKey="4">
+                            <h2 id="sistema-motor">Sistema de motor</h2>
+                            <div className="products">   
+                                {listSistemaMotor}
+                            </div>
+                        </Tab.Pane>
+                        <Tab.Pane eventKey="5">
+                            <h2 id="luces">Luces</h2>
+                            <div className="products">   
+                                {listLuces}
+                            </div>
+                        </Tab.Pane>
+                        <Tab.Pane eventKey="6">
+                            <h2 id="accesorios-motor">Accesorios para motor</h2>
+                            <div className="products">   
+                                {listAccesorioMotor}
+                            </div>
+                        </Tab.Pane>
+                        <Tab.Pane eventKey="7">
+                            <h2 id="accesorios-piloto">Accesorios para piloto</h2>
+                            <div className="products">   
+                                {listAccesorioPiloto}
+                            </div>
+                        </Tab.Pane>
+                        <Tab.Pane eventKey="8">
+                            <h2 id="sistemas-frenos">Sistema de frenos</h2>
+                            <div className="products">   
+                                {listSistemaFrenos}
+                            </div>
+                        </Tab.Pane>
+                    </Tab.Content>
+                    </Col>
+                </Row>
+            </Tab.Container>
         </Container>
     </React.Fragment>
   );

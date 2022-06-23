@@ -9,6 +9,24 @@ const ProductItem= (props) => {
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
     const class_= "c-item" + ` ${props.in_}`;
+
+    const [multiply, setMultiply] = useState(1);
+
+    const decreaseMultiply = () => {
+        if (multiply <= 1) {
+            setMultiply(1);
+        }else {
+            setMultiply(multiply - 1);
+        }
+    }
+
+    const increaseMultiply = () => {
+            setMultiply(multiply + 1);
+    }
+
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
     return (
         <React.Fragment>
             <div className={class_}>
@@ -42,8 +60,18 @@ const ProductItem= (props) => {
                                 {props.name} - {props.mark}
                                 </p>
                                 <p className="c-price" style={{textAlign:"center", backgroundColor:"#ffd7bf", padding:"10px 20px", borderRadius: "10px",}}>
-                                    S/ {props.price}
+                                    S/ {numberWithCommas(props.price)}
                                 </p>
+                                <div className="c-price total-counter" style={{textAlign:"center"}}>
+                                    <p>
+                                    Total: S/ {numberWithCommas(props.price * multiply)}
+                                    </p>
+                                    <div className="counter-section"> 
+                                        <button className="counter-less" onClick={decreaseMultiply}>-</button>
+                                        <p className="counter-field">{multiply}</p>
+                                        <button className="counter-more" onClick={increaseMultiply}>+</button>
+                                    </div>
+                                </div> 
                                 <Button className="modal-contact-button" variant="primary" onClick={() => window.location.href = contactURL}>
                                     Contactar y hacer reserva
                                 </Button>

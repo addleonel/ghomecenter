@@ -4,9 +4,6 @@ import { Fade } from "react-awesome-reveal";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import logo from '../assets/static/logo/logo.png';
-import bars from '../assets/static/icons/bars.svg';
-
 import '../assets/styles/Header.scss';
 import buttonURL from "../utils";
 
@@ -63,6 +60,40 @@ const Header = () => {
     document.getElementById('navbarroot-id').style.background = '#fff';
   }
 
+  // // display company options 
+  // useEffect(() => {
+  //   let buttonoptions = document.getElementById('nav-bar__buttons-item--company-id');
+  //   let options = document.getElementById('nav-bar-options-company-id');
+  //   let optionsContainer = document.getElementById('nav-bar-options-company-container-id');
+  //   buttonoptions.addEventListener('mouseover', () => {
+  //     options.style.display = 'block';
+  //     optionsContainer.style.display = 'block';
+  //     document.getElementById('navbarroot-id').style.background = 'transparent';
+  //   });
+  //   buttonoptions.addEventListener('mouseout', () => {
+  //     options.style.display = 'none';
+  //     optionsContainer.style.display = 'none';
+  //   });
+  //   options.addEventListener('mousemove', () => {
+  //     options.style.display = 'block';
+  //     optionsContainer.style.display = 'block';
+  //     document.getElementById('navbarroot-id').style.background = 'transparent';
+  //   });
+  //   options.addEventListener('mouseleave', () => {
+  //     options.style.display = 'none';
+  //     optionsContainer.style.display = 'none';
+  //     document.getElementById('navbarroot-id').style.background = '#fff';
+  //   });     
+  // });
+  
+  // const hideCompanyOptions = () => {
+  //   let options = document.getElementById('nav-bar-options-company-id');
+  //   let optionsContainer = document.getElementById('nav-bar-options-company-container-id');
+  //   options.style.display = 'none';
+  //   optionsContainer.style.display = 'none';
+  //   document.getElementById('navbarroot-id').style.background = '#fff';
+  // }
+  // reponsive options
   const displayResponsive = (e) => {
     e.preventDefault();
     let responsiveBlock = document.getElementById("nav-bar__responsive");

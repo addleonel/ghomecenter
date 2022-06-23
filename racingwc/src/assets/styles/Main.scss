@@ -1,7 +1,14 @@
+.section-p {
+    width: 100%;
+    padding:100px 0 ;
+    background-image: url("https://images.pexels.com/photos/19101/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .section-m {
     width: 100%;
     padding:100px 0 ;
-
 }
 
 .section-1 {
@@ -117,8 +124,58 @@
     object-fit: cover;
 }
 
+// products
+.category-menu-container {
+    width: 100%;
+    padding: 0;
+}
+
+.category-menu-list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 40px 0;
+}
+
+
+.marquee a {
+    animation: marquee 60s linear infinite;
+}
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    50% { transform: translate(-50%, 0); }
+    100%   { transform: translate(0, 0); }
+}
+
+.category-menu-item__link {
+    background-color: #eaf0ff;
+    padding: 20px 25px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #575757;
+    margin: 20px 20px;
+    transition: all .4s;
+}
+
+.category-menu-item__link:hover {
+    background-color: #667fbe;
+    color: #ffffff;
+}
+
 .category {
     margin: 50px 0;
+}
+
+.left-tabs-example {
+    margin-top: 50px !important;
+}
+
+.nav-item {
+    cursor: pointer !important;
 }
 
 .c-container {
@@ -216,6 +273,31 @@
     outline: none !important;
  }
 
+ .total-counter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ .counter-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+ }
+
+.counter-less, .counter-more {
+    border: none;
+    
+}
+
+.counter-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+
 // Arrow style
 .slick-prev, .slick-next {
     z-index: 1;
@@ -271,7 +353,14 @@
         height: 300px;
         object-fit: contain;
     }
-   
+    
+    .total-counter {
+        flex-direction: column;
+    }
+
+    .category-menu-container {
+        display: none;
+    }
  }
 
  @media screen and (max-width: 1286px) {
