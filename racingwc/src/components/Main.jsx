@@ -246,12 +246,12 @@ const Main = () => {
 				<Container fluid="xxl">
 					<div className="c-container">
 						<Slider {...sliderState}>
-							<div>
+							{/* <div>
 								<HashLink to="/products/#llantas" className="circle-image">
 									<img style={{borderRadius: "50%"}} src="https://images.pexels.com/photos/5806190/pexels-photo-5806190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"  alt="" />
 									<p>Llantas</p>
 								</HashLink>
-							</div>
+							</div> */}
 							<div>
 								<HashLink to="/products/#sistema-arrastre" className="circle-image">
 									<img style={{borderRadius: "50%"}} src="https://images.pexels.com/photos/1119796/pexels-photo-1119796.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
@@ -264,18 +264,18 @@ const Main = () => {
 									<p>Sistema electrico</p>
 								</HashLink>
 							</div>
-							<div>
+							{/* <div>
 								<HashLink to="/products/#sistema-motor" className="circle-image">
 									<img style={{borderRadius: "50%"}} src="https://images.pexels.com/photos/8550641/pexels-photo-8550641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
 									<p>Sistema de motor</p>
 								</HashLink>
-							</div>
-							<div>
+							</div> */}
+							{/* <div>
 								<HashLink to="/products/#luces" className="circle-image">
 									<img style={{borderRadius: "50%"}} src="https://images.pexels.com/photos/1253640/pexels-photo-1253640.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
 									<p>Luces</p>
 								</HashLink>
-							</div>
+							</div> */}
 							<div>
 								<HashLink to="/products/#accesorios-motor" className="circle-image">
 									<img style={{borderRadius: "50%"}} src="https://images.pexels.com/photos/1407130/pexels-photo-1407130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
@@ -288,21 +288,22 @@ const Main = () => {
 									<p>Accesorios para piloto</p>
 								</HashLink>
 							</div>
-							<div>
+							 <div>
 								<HashLink to="/products/#sistemas-frenos" className="circle-image">
 									<img style={{borderRadius: "50%"}} src="https://images.pexels.com/photos/2377903/pexels-photo-2377903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
 									<p>Sistemas de frenos</p>
 								</HashLink>
-							</div>
+							</div> 
+							
 						</Slider>
 					</div>
-					<h2 className="category">Llantas</h2>
+					{/* <h2 className="category">Llantas</h2>
 					<div className="c-container">
 						<Slider {...sliderState}>
 							{listLlantas}
 						</Slider>
 						<HashLink style={{textDecoration: "none"}} to="/products/#llantas">Ver más</HashLink>
-					</div>
+					</div> */}
 					<h2 className="category">Sistema de arrastre</h2>
 					<div className="c-container">
 						<Slider {...sliderState}>
@@ -317,20 +318,20 @@ const Main = () => {
 						</Slider>
 						<HashLink style={{textDecoration: "none"}}to="/products/#sistema-electrico">Ver más</HashLink>
 					</div>
-					<h2 className="category">Sistema de Motor</h2>
+					{/* <h2 className="category">Sistema de Motor</h2>
 					<div className="c-container">
 						<Slider {...sliderState}>
 							{listSistemaMotor}
 						</Slider>
 						<HashLink style={{textDecoration: "none"}}to="/products/#sistema-motor">Ver más</HashLink>
-					</div>
-					<h2 className="category">Luces</h2>
+					</div> */}
+					{/* <h2 className="category">Luces</h2>
 					<div className="c-container">
 						<Slider {...sliderState}>
 							{listLuces}
 						</Slider>
 						<HashLink style={{textDecoration: "none"}}to="/products/#luces">Ver más</HashLink>
-					</div>
+					</div> */}
 					<h2 className="category">Accesorios para Motor</h2>
 					<div className="c-container">
 						<Slider {...sliderState}>
@@ -345,13 +346,13 @@ const Main = () => {
 						</Slider>
 						<HashLink style={{textDecoration: "none"}}to="/products/#accesorios-piloto">Ver más</HashLink>
 					</div>
-					<h2 className="category">Sistemas de frenos</h2>
+					{/* <h2 className="category">Sistemas de frenos</h2>
 					<div className="c-container">
 						<Slider {...sliderState}>
 							{listSistemaFrenos}
 						</Slider>
 						<HashLink style={{textDecoration: "none"}}to="/products/#sistemas-frenos">Ver más</HashLink>
-					</div>
+					</div> */}
 				</Container>
 			</section>
 		</React.Fragment>

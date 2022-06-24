@@ -17,11 +17,11 @@ const Footer = () => {
         </ul>
         <ul className="home-footer__ul">
             <p className="home-footer__p"> Nuestras categorías:</p>
-            <li className="home-footer__li"><HashLink  to="/products/#llantas" className="home-footer__link">Llantas</HashLink></li>
+            {/* <li className="home-footer__li"><HashLink  to="/products/#llantas" className="home-footer__link">Llantas</HashLink></li> */}
             <li className="home-footer__li"><HashLink  to="/products/#sistema-arrastre" className="home-footer__link">Sistema de arrastre</HashLink></li>
             <li className="home-footer__li"><HashLink  to="/products/#sistema-electrico" className="home-footer__link">Sistema electrico</HashLink></li>
-            <li className="home-footer__li"><HashLink  to="/products/#sistema-motor" className="home-footer__link">sistema de motor</HashLink></li>
-            <li className="home-footer__li"><HashLink  to="/products/#luces" className="home-footer__link">Luces</HashLink></li>
+            {/* <li className="home-footer__li"><HashLink  to="/products/#sistema-motor" className="home-footer__link">sistema de motor</HashLink></li> */}
+            {/* <li className="home-footer__li"><HashLink  to="/products/#luces" className="home-footer__link">Luces</HashLink></li> */}
             <li className="home-footer__li"><HashLink  to="/products/#accesorios-motor" className="home-footer__link">Accesorios para motor</HashLink></li>
             <li className="home-footer__li"><HashLink  to="/products/#accesorios-piloto" className="home-footer__link">Accesorios para piloto</HashLink></li>
             <li className="home-footer__li"><HashLink  to="/products/#sistemas-frenos" className="home-footer__link">Sistema de frenos</HashLink></li>

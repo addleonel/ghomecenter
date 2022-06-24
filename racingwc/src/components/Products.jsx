@@ -158,14 +158,14 @@ const Products = () => {
         <section className="category-menu-container">
             <Container>
                 <div className="category-menu-list marquee">
-                    <HashLink  to="/products/#llantas" className="category-menu-item__link">Llantas</HashLink>
+                    {/* <HashLink  to="/products/#llantas" className="category-menu-item__link">Llantas</HashLink> */}
                     <HashLink  to="/products/#sistema-arrastre" className="category-menu-item__link">Sistema de arrastre</HashLink>
                     <HashLink  to="/products/#sistema-electrico" className="category-menu-item__link">Sistema electrico</HashLink>
-                    <HashLink  to="/products/#sistema-motor" className="category-menu-item__link">sistema de motor</HashLink>
-                    <HashLink  to="/products/#luces" className="category-menu-item__link">Luces</HashLink>
+                    {/* <HashLink  to="/products/#sistema-motor" className="category-menu-item__link">sistema de motor</HashLink> */}
+                    {/* <HashLink  to="/products/#luces" className="category-menu-item__link">Luces</HashLink> */}
                     <HashLink  to="/products/#accesorios-motor" className="category-menu-item__link">Accesorios para motor</HashLink>
                     <HashLink  to="/products/#accesorios-piloto" className="category-menu-item__link">Accesorios para piloto</HashLink>
-                    <HashLink  to="/products/#sistemas-frenos" className="category-menu-item__link">Sistema de frenos</HashLink>
+                    {/* <HashLink  to="/products/#sistemas-frenos" className="category-menu-item__link">Sistema de frenos</HashLink> */}
                 </div>
             </Container>
         </section>
@@ -182,21 +182,21 @@ const Products = () => {
                 <Row className="left-tabs-example">
                     <Col sm={3}>
                     <Nav variant="pills" className="flex-column">
-                        <Nav.Item>
+                        {/* <Nav.Item>
                             <Nav.Link  eventKey="1" >Llantas</Nav.Link>
-                        </Nav.Item>
+                        </Nav.Item> */}
                         <Nav.Item>
                             <Nav.Link eventKey="2">Sistema de arrastre</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
                             <Nav.Link eventKey="3">Sistema electrico</Nav.Link>
                         </Nav.Item>
-                        <Nav.Item>
+                        {/* <Nav.Item>
                             <Nav.Link eventKey="4">Sistema de motor</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
+                        </Nav.Item> */}
+                        {/* <Nav.Item>
                             <Nav.Link eventKey="5">Luces</Nav.Link>
-                        </Nav.Item>
+                        </Nav.Item> */}
                         <Nav.Item>
                             <Nav.Link eventKey="6">Accesorios para motor</Nav.Link>
                         </Nav.Item>
@@ -204,19 +204,19 @@ const Products = () => {
                         <Nav.Item>
                             <Nav.Link eventKey="7">Accesorios para piloto</Nav.Link>
                         </Nav.Item>
-                        <Nav.Item>
+                        {/* <Nav.Item>
                             <Nav.Link eventKey="8">Sistema de frenos</Nav.Link>
-                        </Nav.Item>                                                    
+                        </Nav.Item>                                                     */}
                     </Nav>
                     </Col>
                     <Col sm={9}>
                     <Tab.Content>
-                        <Tab.Pane eventKey="1">
+                        {/* <Tab.Pane eventKey="1">
                             <h2 id="llantas" >Llantas </h2>
                             <div className="products">
                                 {listLlantas}
                             </div>
-                        </Tab.Pane>
+                        </Tab.Pane> */}
                         <Tab.Pane eventKey="2">
                             <h2 id="sistema-arrastre">Sistema de arrastre</h2>
                             <div className="products">   
@@ -229,18 +229,18 @@ const Products = () => {
                                 {listSistemaElectrico}
                             </div>
                         </Tab.Pane>
-                        <Tab.Pane eventKey="4">
+                        {/* <Tab.Pane eventKey="4">
                             <h2 id="sistema-motor">Sistema de motor</h2>
                             <div className="products">   
                                 {listSistemaMotor}
                             </div>
-                        </Tab.Pane>
-                        <Tab.Pane eventKey="5">
+                        </Tab.Pane> */}
+                        {/* <Tab.Pane eventKey="5">
                             <h2 id="luces">Luces</h2>
                             <div className="products">   
                                 {listLuces}
                             </div>
-                        </Tab.Pane>
+                        </Tab.Pane> */}
                         <Tab.Pane eventKey="6">
                             <h2 id="accesorios-motor">Accesorios para motor</h2>
                             <div className="products">   
@@ -253,12 +253,12 @@ const Products = () => {
                                 {listAccesorioPiloto}
                             </div>
                         </Tab.Pane>
-                        <Tab.Pane eventKey="8">
+                        {/* <Tab.Pane eventKey="8">
                             <h2 id="sistemas-frenos">Sistema de frenos</h2>
                             <div className="products">   
                                 {listSistemaFrenos}
                             </div>
-                        </Tab.Pane>
+                        </Tab.Pane> */}
                     </Tab.Content>
                     </Col>
                 </Row>
