@@ -178,7 +178,7 @@ const Products = () => {
         <span id="accesorios-piloto"></span>
         <span id="sistemas-frenos"></span>
         <Container fluid="xxl" >
-            <Tab.Container id="left-tabs-example" defaultActiveKey="1">
+            <Tab.Container id="left-tabs-example" defaultActiveKey="2">
                 <Row className="left-tabs-example">
                     <Col sm={3}>
                     <Nav variant="pills" className="flex-column">
