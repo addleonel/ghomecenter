@@ -1,6 +1,6 @@
-
 import os
 import sys
+from pathlib import Path
 import dj_database_url
 from django.core.management.utils import get_random_secret_key
 
@@ -30,7 +30,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'contact.apps.ContactConfig',
+    'contact',
 ]
 
 MIDDLEWARE = [
@@ -49,8 +49,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'tplates'),
-            os.path.join(BASE_DIR, 'racingwc'),
+            os.path.join(BASE_DIR, 'templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -65,7 +64,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'rx2motors.wsgi.application'
-
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
@@ -124,10 +123,12 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.0/howto/static-files/
-STATIC_URL = '/static/'
+# https://docs.djangoproject.com/en/3.0/howto/static-les/
+
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = [
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
-    os.path.join(BASE_DIR, 'racingwc/build'),
-]
+    Path(BASE_DIR) / 'racingwc' / 'dist',
+)

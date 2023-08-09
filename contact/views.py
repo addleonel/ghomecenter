@@ -1,14 +1,15 @@
 from django.shortcuts import render
+from django.conf import settings
 from .models import ContactModel 
 
 def welcome_view(request):
-    return render(request, 'build/index.html')
+    return render(request, 'welcome.html', {'debug': settings.DEBUG})
 
 def products_view(request):
-    return render(request, 'build/index.html')
+    return render(request, 'welcome.html', {'debug': settings.DEBUG})
 
 def about_view(request):
-    return render(request, 'build/index.html')
+    return render(request, 'welcome.html', {'debug': settings.DEBUG})
 
 def contact_view(request):
     if request.method == 'POST':

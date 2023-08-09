@@ -1,0 +1,14 @@
+{
+  "src/main.css": {
+    "file": "assets/main-aef791fb.css",
+    "src": "src/main.css"
+  },
+  "src/main.tsx": {
+    "css": [
+      "assets/main-aef791fb.css"
+    ],
+    "file": "assets/main-10125d7d.js",
+    "isEntry": true,
+    "src": "src/main.tsx"
+  }
+}
